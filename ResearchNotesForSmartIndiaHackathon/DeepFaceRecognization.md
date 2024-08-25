@@ -1,5 +1,5 @@
-#Face recognization<br>
-##Factors<br>
+# Face recognization<br>
+## Factors<br>
 1.CNN
 2.Large data sets
 ##Goals<br>
