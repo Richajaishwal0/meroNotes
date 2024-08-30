@@ -18,8 +18,10 @@ ex: the illness is often accompanied by nausea<br>
 ``` notoriously: used to emphasize that a quality or fact, typically a bad one, is well known.```<br>
 ex:
 "the company is notoriously difficult to contact"<br>
-``` pleading ```
-```overindulgence```
-``` cautious```
+``` pleading:the action of making an emotional or earnest appeal to someone. ```<br>
+```overindulgence:the wishes of (someone) to an excessive extent.```<br>
+ex: "his mother had overindulged him"<br>
+``` cautious:(of a person) careful to avoid potential problems or dangers.```<br>
+ex: "a cautious driver"
 
 
