@@ -10,6 +10,8 @@ ex:A captivating story <br>
 ex: delights in taking long walks.<br>
 ``` bailiff :A court attendant entrusted with duties such as the maintenance of order in a courtroom during a trial.```<br>
 ex:The bailiff entered the courtroom, announcing the arrival of the judge as everyone stood in respect.<br>
+``` accompanies: to present or occur at the same time```<br>
+ex: the illness is often accompanied by nausea
 
 
 
