@@ -58,3 +58,18 @@ Example: Confirming a video message from a company executive.
 Use Case: Validating video evidence during legal proceedings.
 Example: Ensuring video authenticity in litigation.
 These examples highlight sectors other than DRDO tha
+
+
+# Role of GANs in Deep Fake Detection:
+ ## Creating Deep Fakes for Training:
+
+### GANs are often used to generate deep fake videos by swapping faces in videos. This process helps create a large dataset of fake videos that can be used to train detection algorithms. By exposing the detection model to a variety of fake content, the model learns to identify patterns and inconsistencies specific to deep fakes.
+## Adversarial Training:
+### In adversarial training, one model (the generator) creates deep fake videos, while another model (the discriminator) tries to detect them. This setup improves the robustness of the discriminator, making it more effective at identifying deep fakes by constantly challenging it with new and improved fakes.
+
+## Detecting Anomalies:
+### GANs can help identify subtle anomalies in videos that might indicate they are deep fakes. For example, inconsistencies in facial expressions, unnatural transitions, or mismatches between audio and visual cues can be flagged by the model.
+# Example:
+## Training a Discriminator:<br>
+``` You can use GANs to train a discriminator model to detect deep fake videos by feeding it both real and GAN-generated fake videos. Over time, the discriminator becomes better at spotting deep fakes based on features like facial movements, lighting inconsistencies, or unrealistic transitions.```<br>
+
