@@ -71,5 +71,5 @@ These examples highlight sectors other than DRDO tha
 ### GANs can help identify subtle anomalies in videos that might indicate they are deep fakes. For example, inconsistencies in facial expressions, unnatural transitions, or mismatches between audio and visual cues can be flagged by the model.
 # Example:
 ## Training a Discriminator:<br>
-``` You can use GANs to train a discriminator model to detect deep fake videos by feeding it both real and GAN-generated fake videos. Over time, the discriminator becomes better at spotting deep fakes based on features like facial movements, lighting inconsistencies, or unrealistic transitions.```<br>
+###  GANs can be used to train a discriminator model to detect deep fake videos by feeding it both real and GAN-generated fake videos. Over time, the discriminator becomes better at spotting deep fakes based on features like facial movements, lighting inconsistencies, or unrealistic transitions.
 
