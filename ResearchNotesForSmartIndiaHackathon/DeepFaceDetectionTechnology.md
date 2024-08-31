@@ -84,6 +84,6 @@ These examples highlight sectors other than DRDO tha
 ### Continuously generate new deep fakes with the GAN and test your detection model on them. This helps to evaluate and improve the model's robustness.
 ## Technology Stack:
 1.TensorFlow or PyTorch: For implementing and training GANs and other neural networks.<hr>
-2.Keras: For building the generator and discriminator models in a more accessible framework.
-3.OpenCV: For video processing and feature extraction.
-4.CUDA: To leverage GPU acceleration for faster training and processing.
+2.Keras: For building the generator and discriminator models in a more accessible framework.<hr>
+3.OpenCV: For video processing and feature extraction.<hr>
+4.CUDA: To leverage GPU acceleration for faster training and processing.<hr>
