@@ -93,6 +93,7 @@ These examples highlight sectors other than DRDO tha
 Technical Feasibility: The project is doable using state-of-the-art AI/ML technologies like TensorFlow, PyTorch, and Keras. GANs have been effectively tried in similar contexts.
 Resource Feasibility: Requires good quality datasets, GPUs, and deep learning expertise. This is generally available.
 Market Feasibility: Demand for deep fake detection is high in media, law enforcement, and social media.
+<hr>
 2. Challenges and Risks
 Data Quality: Acquiring diverse real and fake video datasets is challenging.
 Overfitting: The model may excel on training data but struggle with new deep fakes.
@@ -100,6 +101,7 @@ Training GANs requires significant resources and time.
 Evolving techniques-maybe advanced deep fake methods-could challenge the model.
 False Positives/Negatives: The model may incorrectly classify videos as real or fake.
 Ethical Issues: Deep fake content can create an ethical issue in training.
+<hr>
 3. Overcoming Challenges
 Data Quality: Collaborate on dataset access, and use data augmentation to increase it.
 Overfitting: Regularization, use of diverse training data.
