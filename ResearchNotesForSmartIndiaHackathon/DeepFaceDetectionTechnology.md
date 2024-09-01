@@ -90,9 +90,9 @@ These examples highlight sectors other than DRDO tha
 
 #Some points on presentations
 1. Feasibility Study
-Technical Feasibility: The project is doable using state-of-the-art AI/ML technologies like TensorFlow, PyTorch, and Keras. GANs have been effectively tried in similar contexts.
-Resource Feasibility: Requires good quality datasets, GPUs, and deep learning expertise. This is generally available.
-Market Feasibility: Demand for deep fake detection is high in media, law enforcement, and social media.
+Technical Feasibility: The project is doable using state-of-the-art AI/ML technologies like TensorFlow, PyTorch, and Keras. GANs have been effectively tried in similar contexts.<br>
+Resource Feasibility: Requires good quality datasets, GPUs, and deep learning expertise. This is generally available.<br>
+Market Feasibility: Demand for deep fake detection is high in media, law enforcement, and social media.<br>
 <hr>
 2. Challenges and Risks
 Data Quality: Acquiring diverse real and fake video datasets is challenging.<br>
