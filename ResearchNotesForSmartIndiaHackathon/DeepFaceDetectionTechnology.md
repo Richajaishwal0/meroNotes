@@ -95,17 +95,17 @@ Resource Feasibility: Requires good quality datasets, GPUs, and deep learning ex
 Market Feasibility: Demand for deep fake detection is high in media, law enforcement, and social media.
 <hr>
 2. Challenges and Risks
-Data Quality: Acquiring diverse real and fake video datasets is challenging.
-Overfitting: The model may excel on training data but struggle with new deep fakes.
-Training GANs requires significant resources and time.
-Evolving techniques-maybe advanced deep fake methods-could challenge the model.
-False Positives/Negatives: The model may incorrectly classify videos as real or fake.
-Ethical Issues: Deep fake content can create an ethical issue in training.
+Data Quality: Acquiring diverse real and fake video datasets is challenging.<br>
+Overfitting: The model may excel on training data but struggle with new deep fakes.<br>
+Training GANs requires significant resources and time.<br>
+Evolving techniques-maybe advanced deep fake methods-could challenge the model.<br>
+False Positives/Negatives: The model may incorrectly classify videos as real or fake.<br>
+Ethical Issues: Deep fake content can create an ethical issue in training.<br>
 <hr>
 3. Overcoming Challenges
-Data Quality: Collaborate on dataset access, and use data augmentation to increase it.
-Overfitting: Regularization, use of diverse training data.
-Computational Cost: Optimize model performance using cloud GPU and leveraging transfer learning.
-Evolving Techniques: Update the model on the evolving deep fake techniques.
-False Positives/Negatives: Use ensemble methods for better detection.
-Ethical Issues: Make sure to observe ethics and permissions.
+Data Quality: Collaborate on dataset access, and use data augmentation to increase it.<br>
+Overfitting: Regularization, use of diverse training data.<br>
+Computational Cost: Optimize model performance using cloud GPU and leveraging transfer learning.<br>
+Evolving Techniques: Update the model on the evolving deep fake techniques.<br>
+False Positives/Negatives: Use ensemble methods for better detection.<br>
+Ethical Issues: Make sure to observe ethics and permissions.<br>
