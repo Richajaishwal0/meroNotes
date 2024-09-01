@@ -87,3 +87,23 @@ These examples highlight sectors other than DRDO tha
 2.Keras: For building the generator and discriminator models in a more accessible framework.<hr>
 3.OpenCV: For video processing and feature extraction.<hr>
 4.CUDA: To leverage GPU acceleration for faster training and processing.<hr>
+
+#Some points on presentations
+1. Feasibility Study
+Technical Feasibility: The project is doable using state-of-the-art AI/ML technologies like TensorFlow, PyTorch, and Keras. GANs have been effectively tried in similar contexts.
+Resource Feasibility: Requires good quality datasets, GPUs, and deep learning expertise. This is generally available.
+Market Feasibility: Demand for deep fake detection is high in media, law enforcement, and social media.
+2. Challenges and Risks
+Data Quality: Acquiring diverse real and fake video datasets is challenging.
+Overfitting: The model may excel on training data but struggle with new deep fakes.
+Training GANs requires significant resources and time.
+Evolving techniques-maybe advanced deep fake methods-could challenge the model.
+False Positives/Negatives: The model may incorrectly classify videos as real or fake.
+Ethical Issues: Deep fake content can create an ethical issue in training.
+3. Overcoming Challenges
+Data Quality: Collaborate on dataset access, and use data augmentation to increase it.
+Overfitting: Regularization, use of diverse training data.
+Computational Cost: Optimize model performance using cloud GPU and leveraging transfer learning.
+Evolving Techniques: Update the model on the evolving deep fake techniques.
+False Positives/Negatives: Use ensemble methods for better detection.
+Ethical Issues: Make sure to observe ethics and permissions.
