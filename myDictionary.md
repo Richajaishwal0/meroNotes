@@ -22,7 +22,7 @@ ex:
 ```overindulgence:the wishes of (someone) to an excessive extent.```<br>
 ex: "his mother had overindulged him"<br>
 ``` cautious:(of a person) careful to avoid potential problems or dangers.```<br>
-ex: "a cautious driver"
+ex: "a cautious driver"<br>
 ```overwhelmed: have a strong emotional effect on. ```
 
 
