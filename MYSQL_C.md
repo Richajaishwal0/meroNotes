@@ -1,4 +1,4 @@
-# search mysql.h
+# Overall connection between C and Mysql
 ## Default Installation Path:
 1.Open File Explorer.
 2.Navigate to the Connector Installation Directory:
