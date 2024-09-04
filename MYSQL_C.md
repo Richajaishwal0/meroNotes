@@ -7,5 +7,5 @@ use this to enter the directory where you can find the "mysql.h"
  C:\Program Files\MySQL\MySQL Connector C X.Y\include
 ```
 3.Locate mysql.h
-`#RRGGBB`
+`#0969DA`
 
