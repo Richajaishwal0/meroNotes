@@ -13,8 +13,8 @@ use this to enter the directory where you can find the "mysql.h"
 4.Open Dev-C++.
 5.Go to Tools -> Compiler Options.
 6.Navigate to Directories Tab.  
-     - Include Directories:
-       - Click Add and browse to the directory containing mysql.h. 
+       - Include Directories:
+          - Click Add and browse to the directory containing mysql.h. 
          Example path:
      ``` C:\Program Files\MySQL\MySQL Server X.Y\include. ```
     - Library Directories:
