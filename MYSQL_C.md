@@ -47,4 +47,9 @@ gcc -I "C:\Program Files\MySQL\MySQL Server 8.0\include" -L "C:\Program Files\My
 gcc -I ".\proj\include" -L ".\proj\lib" -o output.exe code.c
 ```
 
+## Configuring Dev C++ for using mysql library
+
+- Go to Tools > Compiler Options > Directories 
+![image](https://github.com/user-attachments/assets/3c0d5a76-dc3a-46f3-958f-161e9e0f9327)
+
 
