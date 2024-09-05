@@ -25,3 +25,26 @@ i. Click Add and browse to the directory containing MySQL library files.<br>
 Example path:
 <h>
  **C:\Program Files\MySQL\MySQL Server X.Y\lib.**
+
+ ---
+
+ ## Working with mysql in C
+
+- Connecting to mysql database from C requires `mysql.h` header file
+- `mysql.h` can be found in `C:\Program Files\MySQL\MySQL Server 8.0\include`
+- Addtionary it requires `libmysql.dll` library
+- DLL stands for dynamically link library. I'll .... explore fruther
+- But, `mysql.h` requires further dependencies such as `file_types.h`, `mysql.h`, etc.
+
+
+![image](https://github.com/user-attachments/assets/c528a40b-1189-4daa-a2ca-ebe9c0b9d476)
+
+ ```bash
+gcc -I "C:\Program Files\MySQL\MySQL Server 8.0\include" -L "C:\Program Files\MySQL\MySQL Server 8.0\lib" -o output.exe code.c
+```
+
+```bash
+gcc -I ".\proj\include" -L ".\proj\lib" -o output.exe code.c
+```
+
+
