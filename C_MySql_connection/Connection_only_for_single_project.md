@@ -17,8 +17,8 @@ https://downloads.mysql.com/archives/c-c/
 ![image](https://github.com/user-attachments/assets/dfdcb47b-8f12-4f07-92ba-27325ae92d98)
 ### 8.Move to the  directories->Library Directories. Here, you have to add the location of some folders which is mentioned below.
 ![image](https://github.com/user-attachments/assets/f16711eb-021f-48f0-9f18-a0eb96130641)
-### 9.You have to find the MySQl folder again, Bydefault it is located on the C drive if  location is not altered.Click MYSQl Server X.X(X.X is thre version of the SQL). Then, Click on "Lib" and then add it to the path.
-Below I  have visualized the process:
+### 9.You have to find the MySQl folder again, Bydefault it is located on the C drive if  location is not altered.Click MYSQl Server X.X(X.X is the version of the SQL you have downloaded). Then, Click on "lib" and then add it to the path.
+You can see below:
 ![image](https://github.com/user-attachments/assets/5c02c875-5264-4bf6-a51b-78f321c37ab8)
 ![image](https://github.com/user-attachments/assets/5d491032-9d79-42f6-ac56-c2bd79eda9dd)
 ![image](https://github.com/user-attachments/assets/9154fd3a-31da-486e-88d4-0eedc3836f98)
