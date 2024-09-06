@@ -8,7 +8,7 @@ Below are some references to  make the project in Dev C++
 https://dev.mysql.com/downloads/workbench/
 ### 3.After that you have to download MySql Connector/C . Here is the link where you can download as per your system specifications.
 https://downloads.mysql.com/archives/c-c/
-### 4.Then, on clicking the above folder, you  can see the files as:
+### 4.Then, on clicking the above folder(MySql Connector)  in the File Explorer, you  can see the files as:
 ![image](https://github.com/user-attachments/assets/bcdc1761-eed3-40ad-80b8-05dc54f23d28)
 ### 5.Next, you need to move to the lib folder.
 ![image](https://github.com/user-attachments/assets/3fa89353-1e91-46ae-9e2c-3f6d885ea91d)
