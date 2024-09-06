@@ -12,7 +12,7 @@ https://downloads.mysql.com/archives/c-c/
 ![image](https://github.com/user-attachments/assets/bcdc1761-eed3-40ad-80b8-05dc54f23d28)
 ### 5.Next, you need to move to the lib folder.
 ![image](https://github.com/user-attachments/assets/3fa89353-1e91-46ae-9e2c-3f6d885ea91d)
-### 6. Now, next step is to find the "libmysql.dll" file .. It is inside "vs12" folder.Copy that file and paste it in your folder where you are working on.( I mean your project foler)
+### 6. Now, next step is to find the "libmysql.dll" file .. It is inside "vs12" folder. The only thing you have to do is to copy that file and paste it in your folder where you are working on.( I mean your project foler)
 ### 7.Then, You have to be back again in DEV C++ where you left off.Click on project and then project options as shown below:
 ![image](https://github.com/user-attachments/assets/dfdcb47b-8f12-4f07-92ba-27325ae92d98)
 ### 8.Move to the  directories->Library Directories. Here, you have to add the location of some folders which is mentioned below.
