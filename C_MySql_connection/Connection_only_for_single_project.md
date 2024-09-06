@@ -24,17 +24,19 @@ Below I  have visualized the process:
 ![image](https://github.com/user-attachments/assets/9154fd3a-31da-486e-88d4-0eedc3836f98)
  ### After adding the location you can see it as:
 ![image](https://github.com/user-attachments/assets/8d6f1210-75d1-456e-9258-ae1e1a287246)
- ### Similarly, On the same Server folder you will find the include folder. Now in DEV C++ project->project options->Directories->Include Directories
- you have to add the path of "include" folder and in addition to that u need to add the path of the "mysql" folder. It is located inside the "include" folder.
+ ### Similarly, On the same Server folder you will find the include folder. Now in DEV C++ project->project options->Directories->Include Directories you have to add the path of "include" folder and in addition to that u need to add the path of the "mysql" folder. It is located inside the "include" folder.
  After doing so You wil get as shown in the screenshot.
  ![image](https://github.com/user-attachments/assets/ec531593-d1b7-4588-b18c-d166de2288f9)
  ### 10. Again, You have to go to the project->project options->parameters->linkers and add the command:
  `-lmysql` as shown:
  ![image](https://github.com/user-attachments/assets/30a6caa9-2ca5-4dac-bb11-3b8994ce8c00)
  ### 11. Now, create a C/C++ file on the same project.
- ### 12.Here, i had made the database and table using MySQL. I used C to do other operations.
- So, if u are followiing this completely then u need to make the database in MySql using the queries as shown:
+ ### 12.Here, I had created the database and table using MySQL. I used C to do other operations. So, if u are followiing this completely then u need to make the database in MySql using the queries as shown:
  ![image](https://github.com/user-attachments/assets/6e7427fb-923c-4533-90e9-8923b56684b4)
+ ### 13. At last u need to write a code in the .c file and compile and run it.Now u can code to insert, delete, update ... your datas directly from MySQL database using C program.
+ Hope, U got all those and best of luck for your C+SQL projects. 
+ 
+ 
 
 
  
