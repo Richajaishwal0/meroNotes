@@ -23,6 +23,10 @@ ex:
 ex: "his mother had overindulged him"<br>
 ``` cautious:(of a person) careful to avoid potential problems or dangers.```<br>
 ex: "a cautious driver"<br>
-```overwhelmed: have a strong emotional effect on. ```
+```
+overwhelmed: have a strong emotional effect on.
+```
 
-
+```
+retreat: A place where you can go to be alone , away froom either enemies or from any difficulties.
+```
