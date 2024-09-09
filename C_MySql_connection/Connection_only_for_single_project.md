@@ -63,10 +63,19 @@ Go to `Project` -> `Project Options` -> `Parameters` -> `Linker` and add the fol
 ```bash
 -lmysql
 ```
+`### 12. Create a C/C++ File in the Project
+Create a new C/C++ file within the same project.
+
+### 13. Create Database and Tables in MySQL
+Create your database and tables using MySQL. Use the appropriate SQL queries in MySQL to set up your database structure, as shown below:
+
+![Database Creation](https://github.com/user-attachments/assets/6e7427fb-923c-4533-90e9-8923b56684b4)
+
 ### 14. Write, Compile, and Run Your C Code
-Write your C code in the `.c` file within your project. Compile and run the code to perform operations such as insert, delete, update, and more directly on your MySQL database using C programming.
+Write your C code in the `.c` file. Compile and run the code to interact with the MySQL database directly from your C program. You can now perform operations such as insert, delete, update, and more using C.
 
 ---
 
 # **Hope you find this guide helpful, and best of luck with your C + SQL projects!**
+
 
