@@ -31,3 +31,4 @@ conda remove --name campusx --all
 ```
 ## Type 'y'
 ### In this way we can create, activate, deactivate and delete the virtual environment on Anaconda 
+## **Note:  We can use kaggle (provides the dataset as well as jupyter notebook for learning ML) and Google colab( for DL)
