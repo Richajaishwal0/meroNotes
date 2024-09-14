@@ -12,7 +12,13 @@ conda create --name campusx(name of virtual environment)
 conda activate campusx
 ```
 ### Install Jupyter notebook and its dependencies
+## To use the jupyter notebook in the virtual environment , install jupyter  notebook.
 ### Command
 ```bash
 conda install -c anaconda jupyter
+```
+## To deactivate the virtual environment 
+Command
+```bash
+deactivate
 ```
