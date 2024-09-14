@@ -30,3 +30,4 @@ deactivate
 conda remove --name campusx --all
 ```
 ## Type 'y'
+### In this way we can create, activate, deactivate and delete the virtual environment on Anaconda 
