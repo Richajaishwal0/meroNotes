@@ -29,3 +29,4 @@ deactivate
 ```bash
 conda remove --name campusx --all
 ```
+## Type 'y'
