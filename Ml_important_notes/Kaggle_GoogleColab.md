@@ -11,7 +11,7 @@
 ![image](https://github.com/user-attachments/assets/b9568d27-bd67-441d-8509-9bb99a01f356) <hr>
 ## We can use the dataset in google coplab directly by importing it from  kaggle. Here are the process to upload the dataset in Google colab from the kaggle directly.
 - Go to the kaggle account and create a new token<br>
-![image](https://github.com/user-attachments/assets/3743c034-b1db-4e08-9dc3-15ccca7a9114)
+![image](https://github.com/user-attachments/assets/3743c034-b1db-4e08-9dc3-15ccca7a9114) #Link of the dataset
 - Kaggle.json file will be downloaded in the sytem.
 - Upload that file in Google colab.
 - Install the packages opendatasets and pandas
