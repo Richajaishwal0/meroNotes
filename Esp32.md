@@ -9,7 +9,16 @@ This library provides the function to connect the networks, and manage Wi-Fi set
 - WiFi.scanNetworks(): Scans for available Wi-Fi networks.
 - WiFi.status(): Returns the connection status (e.g., WL_CONNECTED).
 - WiFi.localIP(): Returns the local IP address of the ESP32.
-
+# Notes
+Encryption types:
+It refers to the method used by the Wi-Fi network to          protect data sent between devices.
+Common types are:
+  1. WIFI_AUTH_OPEN: No encryption (an open network).
+  2. WIFI_AUTH_WEP: WEP encryption (outdated and insecure).
+  3. WIFI_AUTH_WPA_PSK: WPA encryption with pre-shared key.
+  4. WIFI_AUTH_WPA2_PSK: WPA2 encryption with pre-shared key (commonly 
+    used).
+  5. WIFI_AUTH_WPA_WPA2_PSK: Mixed WPA/WPA2 mode.
 ```bash
 #include "BluetoothSerial.h"
 ```
