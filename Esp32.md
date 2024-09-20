@@ -102,3 +102,4 @@ Sensor library for interfacing with various Adafruit sensors.
 ![image](https://github.com/user-attachments/assets/d7ebad26-6bdf-4cb2-959c-d532fa0401e2)
 
 ### References for pin configurations of esp32-cam  [link](https://lastminuteengineers.com/esp32-cam-pinout-reference)
+### References to program esp32-cam [link](https://randomnerdtutorials.com/getting-started-with-esp32/#esp32-programming-environments)
