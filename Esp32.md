@@ -1,6 +1,4 @@
 ## We will discuss about the esp32 with cam module in detail with its various applications.
-### References for pin configurations of esp32-cam
-[link](https://lastminuteengineers.com/esp32-cam-pinout-reference)
 # Here are some useful packages that are used for esp32
 ```bash
 #include "WiFi.h"
@@ -100,3 +98,7 @@ Sensor library for interfacing with various Adafruit sensors.
 ### Some common functions used are:
 - sensor.read(): Reads sensor data.
 - sensor.begin(): Initializes the sensor.
+## Pin configurations
+![image](https://github.com/user-attachments/assets/d7ebad26-6bdf-4cb2-959c-d532fa0401e2)
+
+### References for pin configurations of esp32-cam  [link](https://lastminuteengineers.com/esp32-cam-pinout-reference)
