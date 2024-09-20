@@ -1,3 +1,6 @@
+## We will discuss about the esp32 with cam module in detail with its various applications.
+### References for pin configurations of esp32-cam
+[link](https://lastminuteengineers.com/esp32-cam-pinout-reference)
 # Here are some useful packages that are used for esp32
 ```bash
 #include "WiFi.h"
