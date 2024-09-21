@@ -1,6 +1,6 @@
 ## We will discuss about the esp32 with cam module in detail with its various applications.
 # Here are some useful packages that are used for esp32
-```bash
+```bas
 #include "WiFi.h"
 ```
 ### Description
