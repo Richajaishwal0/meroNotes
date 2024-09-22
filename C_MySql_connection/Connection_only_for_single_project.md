@@ -1,4 +1,4 @@
-# Connecting MySQL with Dev C++ for C/C++ Programmin
+# Connecting MySQL with Dev C++ for C/C++ Programming
 
 ## Steps to Connect Dev C++ with MySQL by Creating a Project
 
