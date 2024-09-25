@@ -10,7 +10,7 @@ The dataset is loaded, and unnecessary columns are removed.
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('/content/placement.csv')
+df = pd.read_csv('//path//placement.csv')
 df = df.iloc[:, 1:]  # Remove unnecessary columns
 df.head()  # Display the first 5 rows of the dataset
 df.shape  # Display the shape of the dataset
