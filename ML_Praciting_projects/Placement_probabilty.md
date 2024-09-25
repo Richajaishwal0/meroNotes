@@ -1,4 +1,3 @@
-
 # Logistic Regression Model for Placement Prediction
 
 This project implements a logistic regression model to predict student placement based on `CGPA` and `IQ`. The following steps outline the process:
