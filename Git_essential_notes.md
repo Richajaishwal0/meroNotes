@@ -159,5 +159,58 @@ git fetch
 Downloads changes from the remote without merging them.
 
 ---
-
 Now you know the basics of Git, including how to initialize a repository, stage changes, commit, push, fetch, and branch!
+## Some more commands
+<hr>
+# Summary of Git Commands for Pull Request Workflow
+
+This document provides a step-by-step summary of the Git commands used for forking, making changes, and creating a pull request (PR) in a collaborative workflow.
+
+## 1. Clone the Repository
+Clone the forked repository to your local machine.
+```bash
+git clone https://github.com/your-username/forked-repo.git
+cd forked-repo
+```
+
+## 2. Make Changes
+Edit the files as needed, then stage and commit your changes.
+```bash
+git add filename.ext
+git commit -m "Added new function in filename.ext"
+```
+
+## 3. Add Upstream Remote
+Add the original repository as an upstream remote to keep your fork updated.
+```bash
+git remote add upstream https://github.com/friend-username/original-repo.git
+```
+
+## 4. Fetch Updates from Upstream
+Fetch any updates from your friend's original repository.
+```bash
+git fetch upstream
+```
+
+## 5. Merge Changes from Upstream
+Merge the fetched changes into your local branch to ensure it’s up-to-date.
+```bash
+git merge upstream/main
+```
+
+## 6. Push Changes to Your Fork
+Push your local changes to your forked repository on GitHub.
+```bash
+git push origin main
+```
+
+## 7. Create a Pull Request
+1. Go to your forked repository on GitHub.
+2. Click on **"Compare & pull request"**.
+3. Review the changes and submit the pull request (PR).
+
+## Suggested Pull Request Title
+When creating a pull request, use a descriptive title like:
+- `Add new feature for calculating user scores`
+
+This ensures clarity about the changes you made.
