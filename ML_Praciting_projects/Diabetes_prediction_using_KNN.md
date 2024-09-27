@@ -2,7 +2,7 @@
 # K-Nearest Neighbors (KNN) Diabetes Detection
 
 ## Overview
-This project applies the K-Nearest Neighbors (KNN) algorithm to predict whether a person has diabetes, based on the Pima Indian Diabetes dataset. The dataset contains health-related features, and the KNN classifier categorizes individuals as diabetic or non-diabetic.
+This project applies the K-Nearest Neighbors (KNN) algorithm to predict whether a person has diabetes, based on the Indian Diabetes dataset. The dataset contains health-related features, and the KNN classifier categorizes individuals as diabetic or non-diabetic.
 
 ### Libraries Used
 ```python
