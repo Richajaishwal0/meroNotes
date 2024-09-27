@@ -22,7 +22,7 @@ df = pd.read_csv('diabetes.csv')
 print(len(df))
 df.head()
 ```
-
+![image](https://github.com/user-attachments/assets/38a85623-4eb4-4300-98c1-361235f6d80f)
 ### Step 2: Handling Missing Data
 For columns like `'Glucose'`, `'BloodPressure'`, `'SkinThickness'`, `'BMI'`, and `'Insulin'`, zero values are replaced by the mean of the respective columns because zero is not a biologically plausible value for these metrics.
 
@@ -74,7 +74,7 @@ The model is used to predict diabetes for the test set (`X_test`).
 y_pred = classifier.predict(X_test)
 y_pred
 ```
-
+![image](https://github.com/user-attachments/assets/c21da3fd-d321-4068-8da1-a3766e60fb1d)
 ### Step 8: Evaluating the Model
 We evaluate the model using the confusion matrix, F1 score, and accuracy score.
 
@@ -84,3 +84,5 @@ print(cm)
 print(f1_score(Y_test, y_pred))
 print(accuracy_score(Y_test, y_pred))
 ```
+![image](https://github.com/user-attachments/assets/936c0462-6173-497f-98b0-7f6ee63ce126)
+![image](https://github.com/user-attachments/assets/f2002e77-d28d-4f6d-bbc0-d054c36f5281)
