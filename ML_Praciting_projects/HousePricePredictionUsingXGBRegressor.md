@@ -32,6 +32,7 @@ We load the **Boston House Price dataset** from a CSV file:
 house_pd = pd.read_csv('boston.csv')
 house_pd.head()
 ```
+![image](https://github.com/user-attachments/assets/c2bea07b-9af9-4781-95b8-a016a128f258)
 
 This displays the first five rows of the dataset. Each row represents a house, and the columns represent various features (like crime rate, number of rooms, etc.) that might influence the price of the house.
 
@@ -42,6 +43,7 @@ Before working with the dataset, we ensure there are no missing values:
 ```python
 house_pd.isnull().sum()
 ```
+![image](https://github.com/user-attachments/assets/fbb9acba-f4d2-4939-b34c-5378aa927d09)
 
 The result shows that there are no missing values in the dataset.
 
@@ -52,6 +54,7 @@ A quick look at the dataset's statistical properties (mean, median, standard dev
 ```python
 house_pd.describe()
 ```
+![image](https://github.com/user-attachments/assets/36ca107a-0c28-448b-ae54-57b14271d958)
 
 ## 4. Correlation Analysis
 
@@ -63,6 +66,7 @@ plt.figure(figsize=(10,10))
 sns.heatmap(corr, cbar=True, square=True, fmt='.1f', annot=True, annot_kws={'size':8}, cmap='Blues')
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/41c0d185-8de1-4f62-8467-764d2aaa1519)
 
 ## 5. Splitting the Data
 
@@ -118,7 +122,7 @@ plt.ylabel('Predicted Price')
 plt.title('Actual vs Predicted Price')
 plt.show()
 ```
-
+![image](https://github.com/user-attachments/assets/b695ccb1-d39a-44e7-8b7c-c0b634f8b66b)
 ## Conclusion
 
 The XGBoost Regressor successfully predicts house prices with a reasonable level of accuracy. The visualization of actual vs predicted prices provides insight into how well the model performs.
