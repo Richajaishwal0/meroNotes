@@ -3,18 +3,6 @@
 
 ## Overview
 This Jupyter notebook demonstrates how to perform linear regression analysis using a dataset containing information about head size and brain weight. The goal is to understand the relationship between these two variables and to create a predictive model.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Setting Up the Environment](#setting-up-the-environment)
-3. [Reading the Data](#reading-the-data)
-4. [Defining Variables](#defining-variables)
-5. [Calculating the Regression Coefficients](#calculating-the-regression-coefficients)
-6. [Plotting the Data and Regression Line](#plotting-the-data-and-regression-line)
-7. [Calculating the R² Score](#calculating-the-r-score)
-8. [Using Scikit-Learn for Linear Regression](#using-scikit-learn-for-linear-regression)
-9. [Conclusion](#conclusion)
-
 ## Introduction
 In this analysis, we will:
 - Load and explore the dataset.
@@ -48,6 +36,7 @@ data.head()
 - **Loading Data**: The `pd.read_csv()` function reads the CSV file containing head size and brain weight data.
 - **Data Shape**: `data.shape` returns the dimensions of the DataFrame (number of rows and columns).
 - **Previewing Data**: `data.head()` displays the first 5 rows of the dataset to understand its structure.
+![image](https://github.com/user-attachments/assets/a7214c0d-230f-4abf-84ad-ba9f3d2814c5)
 
 ## Defining Variables
 ```python
@@ -108,6 +97,7 @@ plt.show()
   - `plt.plot()`: Plots the regression line in brown.
   - `plt.scatter()`: Creates a scatter plot of the original data points in green.
   - **Labels and Legend**: Adds x and y-axis labels, a legend, and shows the plot.
+![image](https://github.com/user-attachments/assets/252e1467-6151-414b-8a12-3bac76fc5f36)
 
 ## Calculating the R² Score using formula
 ```python
@@ -125,6 +115,7 @@ r2
 - **Predicted Values**: For each data point, calculate the predicted brain weight using the regression equation.
 - **Numerator and Denominator**: Sum the squares of the differences between predicted values and the mean of `Y` for the numerator, and the squares of the differences between actual values and the mean for the denominator.
 - **Final R² Score**: The R² score is calculated as the ratio of the numerator to the denominator.
+![image](https://github.com/user-attachments/assets/1d226296-c93c-4397-b6b3-adc0ca4b913e)
 
 ## Using directlty  Scikit-Learn for Linear Regression
 ```python
@@ -141,6 +132,8 @@ y_pred=model.predict(X)
 r2_score=model.score(X,Y)
 r2_score
 ```
+![image](https://github.com/user-attachments/assets/4c889b28-46c8-4276-be70-8fa3fd8b5453)
+
 - **Importing Libraries**: We import the `LinearRegression` class from Scikit-Learn for linear regression and `mean_squared_error` for error calculation.
 - **Reshaping X**: Reshape `X` to ensure it has the correct dimensions for Scikit-Learn (m rows and 1 column).
 - **Creating and Fitting Model**: Instantiate the `LinearRegression` model and fit it using the reshaped `X` and `Y`.
