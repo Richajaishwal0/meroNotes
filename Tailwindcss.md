@@ -6,3 +6,4 @@ and the html files in the build
 ![image](https://github.com/user-attachments/assets/3ce92d96-7407-4d8d-89d2-2158fe07815b)
 ![image](https://github.com/user-attachments/assets/4f1ce9a9-7eff-4dbc-8df7-cce20bfbe4f2)
 npx tailwindcss -i .src/input.css -o ./build/css/style.css (this will give the style.css in the build folder
+ npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch
