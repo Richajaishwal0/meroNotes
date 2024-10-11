@@ -1,6 +1,6 @@
 # MY learnings
 ```
-Whilst:Similar to while
+Whilst:Similar to 
  ```
 ex: He read the book whilst eating breakfast<br>
 ```
