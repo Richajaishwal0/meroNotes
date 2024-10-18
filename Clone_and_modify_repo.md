@@ -1,4 +1,4 @@
-## Make a folder and open it in VS code .
+## Make a folder and open it in VS code 
 ## Move to the terminal of VS code and the type the below command to clone repository.
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
