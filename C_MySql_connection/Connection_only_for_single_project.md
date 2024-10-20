@@ -76,6 +76,69 @@ Write your C code in the `.c` file. Compile and run the code to interact with th
 
 ---
 
+## A Sample Database connection Code
+>Don't forget to change the username, password and database
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <mysql.h>
+
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+int main(int argc, char  *argv[]) {
+ 
+ printf("Hello, World\n");
+ MYSQL *mysql = NULL;
+ 
+ if (mysql_library_init(argc, argv, NULL)) {
+  fprintf(stderr, "could not MYSQL client library");
+  exit(1);
+ }
+// 
+ mysql = mysql_init(mysql);
+// 
+ if (!mysql) {
+  printf("Initialization failed....");
+  return EXIT_FAILURE;
+ }
+ 
+ if (!mysql_real_connect(
+       mysql,
+       "localhost",
+       "yourdbusername",
+       "yourpass",
+       "databasename",
+       0,
+       NULL,
+       0
+ )) {
+  printf("Failed to connect to the database\n");
+ }else {
+  printf("Connection to the database was successful\n");
+ }
+  
+ mysql_close(mysql);
+ mysql_library_end();
+ 
+ return EXIT_SUCCESS;
+ 
+ return 0;
+}
+
+```
+
+**Hope you get the conneciton sucessful message printed on the console**
+
+
+### If you want to compile and link manually with gcc then you canuse the command below:(Optional)
+```bash
+# change the filename to your_file.c
+ gcc -I"C:/Program Files/MySQL/MySQL Server 8.0/include" -L"C:/Program Files/MySQL/MySQL Server 8.0/lib" -o out.exe main.c -lmysql
+```
+
 # **Hope you find this guide helpful, and best of luck with your C + SQL projects!**
 
 
