@@ -3,7 +3,7 @@
 
 Welcome to my **Learning Notes Repository**! This repository holds a curated collection of my learning notes, projects, and reference materials useful for anyone diving into similar subjects.
 
-## 🗂️ Repository Structur
+## 🗂️ Repository Structure
 
 Below is an overview of what you'll find in each folder:
 
