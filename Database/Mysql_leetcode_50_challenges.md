@@ -1,7 +1,7 @@
  # Here are the list of new information that i got to know during this challenge .
  ### Built in functions 
  1. CHAR_LENGTH(). This can be used to find the length of the character in the string in any row of the table.
-
+2. Round(value,3): This round the value of any column to 3 decimal value.
  ## Self joining can  be used to compare between two rows of the same table
  ex: 
  
