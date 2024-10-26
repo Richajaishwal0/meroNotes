@@ -34,4 +34,11 @@ ex:
 ```sql
 select machine_id,avg(timestamp) from activity group by machine_id;
 ```
-### This will calculate the avg of all the timestamp having same machine_id and display it.
+### This will calculate the avg of all the timestamp having same machine_id and display it as soon below.
+
+| machine_id | avg(timestamp) |
+|------------|----------------|
+| 0          | 2.3730000      |
+| 1          | 0.9875000      |
+| 2          | 4.0280000      |
+
