@@ -2,6 +2,8 @@
  ### Built in functions 
  1. CHAR_LENGTH(). This can be used to find the length of the character in the string in any row of the table.
 2. Round(value,3): This round the value of any column to 3 decimal value.
+3. count (distinct column_name): This is used to count the different values of the columns.
+4. GROUP_CONCAT( column_name SEPARATOR ','): This can be used with group by so as to group all the values that satisfy certain conditions in the same row separated by the comma. 
  ## Self joining can  be used to compare between two rows of the same table
  ex: 
  
