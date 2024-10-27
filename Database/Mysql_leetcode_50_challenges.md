@@ -3,11 +3,17 @@
  1. CHAR_LENGTH(). This can be used to find the length of the character in the string in any row of the table.
 2. Round(value,3): This round the value of any column to 3 decimal value.
 3. count (distinct column_name): This is used to count the different values of the columns.
-4. GROUP_CONCAT( column_name SEPARATOR ','): This can be used with group by so as to group all the values that satisfy certain conditions in the same row separated by the comma. 
+4. GROUP_CONCAT( column_name SEPARATOR ','): This can be used with group by so as to group all the values that satisfy certain conditions in the same row separated by the comma.
+5. COALESCE(..,..,..): The COALESCE function in SQL is used to return the first non-null value from a list of expressions, making it useful for handling null values in database queries. For example, consider a table employees with columns first_name, middle_name, and last_name. You can use COALESCE to retrieve the full name, preferring first_name, then middle_name, and finally last_name, like this:
+```SQL
+   SELECT COALESCE(first_name, middle_name, last_name, 'No Name') AS FullName FROM employees;
+```
+This query will return the first available name from the three columns, or 'No Name' if all are null, ensuring meaningful results in your application.
  ## Self joining can  be used to compare between two rows of the same table
  ex: 
  
  ![image](https://github.com/user-attachments/assets/f82340e4-5c5f-41f8-8ce2-3683264b067f)
+ 
 In this table if we want to display the id of all dates where the temperature is higher as compared to the previous temperature than we need self join.
 ```sql
 select w1.id from weather w1 join weather w2 on //self join
