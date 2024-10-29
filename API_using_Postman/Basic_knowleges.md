@@ -24,3 +24,6 @@ Status codes have conventions. For example, any status code starting with a "2xx
 
 Here are the refereces where you can learn about the variables that can be used to substitude the address/host of the server sp that u can make a request easily.
 [Variables](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/104556)
+Some API allow you to refine the request further with the key-value pairs called query parameter.
+It's quite easy to learn these things that is going to be worthful for sure.
+Check it out [Here](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/929)
