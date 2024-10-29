@@ -31,3 +31,13 @@ Check it out [Here](https://academy.postman.com/path/postman-api-fundamentals-st
 #  Next is the create operation.
 ## Here authorization is important inorder to create the api else you will get the error.
 This [link](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/940) will acknowledge you about the process of creating API in postman
+# Postman has an Auth helper that makes authorizing requests even easier!
+
+## Delete the api-key header
+Before we use the Postman Auth helper, let's remove the hard-coded header we just added on the "add a book" request.
+
+## Hover over the api-key header in the Headers tab and click the "x" icon at the right to delete the header. Save your request.
+
+## Add Auth to the Collection
+The Postman Auth helper can help you add authorization at the request, folder or collection level.
+Do check it out in detail [here](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/941)
