@@ -28,3 +28,6 @@ Status codes have conventions. For example, any status code starting with a "2xx
 ## It's quite easy to learn these things that is going to be worthful for sure.
 
 Check it out [Here](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/929)
+#  Next is the create operation.
+## Here authorization is important inorder to create the api else you will get the error.
+This [link](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/940) will acknowledge you about the process of creating API in postman
