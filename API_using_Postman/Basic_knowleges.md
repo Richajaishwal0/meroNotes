@@ -1,43 +1,55 @@
-## Request methods
 
-### When we make an HTTP call to a server, we specify a request method that indicates the type of operation we are about to perform. These are also called HTTP verbs.
-Some common HTTP request methods correspond to the CRUD operations mentioned earlier. You can see a list of more methods here.
+# Understanding HTTP Request Methods and API Responses
 
-| Method name | Operation                             |
+When making an HTTP call to a server, we specify a request method that indicates the type of operation we intend to perform. These request methods, often referred to as HTTP verbs, correspond to standard CRUD operations. Below is a table outlining some common HTTP request methods:
+
+| Method Name | Operation                             |
 |-------------|---------------------------------------|
 | **GET**     | Retrieve data (Read)                 |
 | **POST**    | Send data (Create)                   |
 | **PUT/PATCH** | Update data (Update)                |
-|             | * **PUT** usually replaces an entire resource, whereas **PATCH** is for partial updates |
-| **DELETE**  | Delete data (Delete)                 |
+|             | * **PUT** typically replaces an entire resource, while **PATCH** is used for partial updates. |
+| **DELETE**  | Remove data (Delete)                 |
 
-## Response status codes
-## The Postman Library API v2 has returned a response status code of "200 OK". Status codes are indicators of whether a request failed or succeeded.
-Status codes have conventions. For example, any status code starting with a "2xx" (a "200-level response") represents a successful call. Get familiar with other status code categories:
+## Response Status Codes
 
-| Code range | Meaning        | Example                                  |
+When using APIs, the server responds with a status code that indicates whether a request was successful or encountered an error. For instance, the Postman Library API v2 returns a status code of "200 OK" for successful requests. Understanding these status codes is crucial, as they follow a specific convention:
+
+| Code Range | Meaning        | Example                                  |
 |------------|----------------|------------------------------------------|
-| **2xx**    | Success        | `200` - OK  <br> `201` - Created  <br> `204` - No content (silent OK) |
-| **3xx**    | Redirection    | `301` - Moved (path changed)            |
-| **4xx**    | Client error   | `400` - Bad request  <br> `401` - Unauthorized  <br> `403` - Not Permitted  <br> `404` - Not Found |
-| **5xx**    | Server error   | `500` - Internal server error  <br> `502` - Bad gateway  <br> `504` - Gateway timeout |
-# First we will talk about the get responses.
-## Here are the refereces where you can learn about the variables that can be used to substitude the address/host of the server sp that u can make a request easily.
-[Variables](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/104556)
-## Some API allow you to refine the request further with the key-value pairs called query parameter.
-## It's quite easy to learn these things that is going to be worthful for sure.
+| **2xx**    | Success        | `200` - OK  <br> `201` - Created  <br> `204` - No Content (silent OK) |
+| **3xx**    | Redirection    | `301` - Moved Permanently (path changed) |
+| **4xx**    | Client Error   | `400` - Bad Request  <br> `401` - Unauthorized  <br> `403` - Forbidden  <br> `404` - Not Found |
+| **5xx**    | Server Error   | `500` - Internal Server Error  <br> `502` - Bad Gateway  <br> `504` - Gateway Timeout |
 
-Check it out [Here](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/929)
-#  Next is the create operation.
-## Here authorization is important inorder to create the api else you will get the error.
-This [link](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/940) will acknowledge you about the process of creating API in postman
-# Postman has an Auth helper that makes authorizing requests even easier!
+## Making GET Requests
 
-## Delete the api-key header
-Before we use the Postman Auth helper, let's remove the hard-coded header we just added on the "add a book" request.
+GET requests are used to retrieve data from a server. You can customize these requests further by using variables to substitute the address or host of the server, allowing for more flexibility. 
 
-## Hover over the api-key header in the Headers tab and click the "x" icon at the right to delete the header. Save your request.
+For additional information about using variables, check out this [Postman Variables Guide](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/104556).
 
-## Add Auth to the Collection
-The Postman Auth helper can help you add authorization at the request, folder or collection level.
-Do check it out in detail [here](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/941)
+### Query Parameters
+
+Many APIs allow you to refine requests with key-value pairs known as query parameters. These parameters enable you to filter or sort the data returned by the API. Understanding how to use them will greatly enhance your API interactions. 
+
+To learn more about query parameters, visit this [Postman Query Parameters Guide](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/929).
+
+## Creating Resources with POST Requests
+
+When creating resources via POST requests, authorization is essential. Without the proper authorization, you may receive an error message. 
+
+For a detailed explanation of how to create APIs in Postman, follow this [Postman API Creation Guide](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/940).
+
+### Using the Postman Auth Helper
+
+Postman provides an Auth helper feature that simplifies the process of authorizing requests. Before utilizing this feature, you may need to remove any hard-coded authorization headers in your requests. 
+
+To do this, hover over the api-key header in the Headers tab and click the "x" icon to delete it. Remember to save your request afterward.
+
+#### Adding Authorization to Collections
+
+You can easily add authorization at the request, folder, or collection level using the Postman Auth helper. For a comprehensive guide on how to do this, refer to the [Postman Auth Helper Guide](https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1/941).
+
+### Conclusion
+
+Understanding HTTP request methods and response status codes is fundamental for interacting with APIs effectively. With the resources and links provided, you should have a solid foundation to begin exploring and utilizing APIs in your projects.
