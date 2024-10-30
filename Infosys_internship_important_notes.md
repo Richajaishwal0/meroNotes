@@ -1,4 +1,4 @@
-# A. Agile Methodology
+## A. Agile Methodology
 
 ## B. GitHub Session
 
