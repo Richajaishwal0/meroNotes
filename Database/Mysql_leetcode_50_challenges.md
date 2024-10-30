@@ -50,3 +50,5 @@ select machine_id,avg(timestamp) from activity group by machine_id;
 | 1          | 0.9875000      |
 | 2          | 4.0280000      |
 
+Important points
+- Subquery can be used to compare between two columns of the same table.
