@@ -1,11 +1,10 @@
-A.Agile methodology 
+# A. Agile Methodology
 
-B.Github-session
-1.What is version control?
-We can go to the previous version and get it back. Traversing through the versions,
-but if we keep everthing in version then it is difficult to find with the original version.
-We can use version control systems such as github,bitbucket,Azure,Repos, AWS code storeto overcome that
+## B. GitHub Session
 
-## Difference between git and github
-- Github is a platform runnning in a cloud
-- Git is in local system as a file or folder command line,can be used offline.
+### 1. What is Version Control?
+Version control is a system that allows you to manage changes to files over time. It enables you to revert to previous versions, making it easier to track modifications and retrieve earlier versions when needed. However, if all changes are stored without proper management, it can become challenging to locate the original version. To address this, we can utilize version control systems such as GitHub, Bitbucket, Azure Repos, and AWS CodeCommit.
+
+### Difference Between Git and GitHub
+- **Git**: A version control system that operates locally on your machine. It allows you to manage files as a command-line tool and can be used offline.
+- **GitHub**: A cloud-based platform that hosts Git repositories, enabling collaboration and sharing among developers.
