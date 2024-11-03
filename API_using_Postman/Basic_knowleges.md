@@ -1,7 +1,7 @@
 
 # Understanding HTTP Request Methods and API Responses
 
-When making an HTTP call to a server, we specify a request method that indicates the type of operation we intend to perform. These request methods, often referred to as HTTP verbs, correspond to standard CRUD operations. Below is a table outlining some common HTTP request methods:
+When making an HTTP call to a server, we specify a request method that indicates the type of operation we intend to perform. These request methods, often referred to as HTTP verbs, correspond to standard CRUD operations. Below is a table outlining some common HTTP request methods
 
 | Method Name | Operation                             |
 |-------------|---------------------------------------|
