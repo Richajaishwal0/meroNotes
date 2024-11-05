@@ -65,3 +65,19 @@ This setup defines a simple Express server that:
 This basic setup is commonly used for local development and can be expanded to handle additional routes, middleware, and server configurations.
 
 ****
+Next one is summarize.js
+create a function as 
+```js
+async function summarizeText(text){
+let data=JSON.stringify({
+"input":text,
+"parameters":{
+"max_length":100,
+"min_length"30
+}
+});
+module.exports=summarizeText;
+```
+Create the token from the hugging face and paste it in the variables of the collection(only in the current value as it act as a password).
+
+We’ll use Postman's client code generation feature to generate code that makes our API call using axios. axios is a library that makes it easy to make HTTP requests in NodeJS and the browser. We already added axios for you to this project in the package.json file to use in our server.
