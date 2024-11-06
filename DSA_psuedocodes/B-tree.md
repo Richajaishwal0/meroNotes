@@ -75,4 +75,3 @@ Here's a simplified and structured approach to implementing a **B-Tree-Based Que
 - Splitting and merging ensure that the tree remains balanced.
 - An in-order traversal is used to retrieve the customer numbers in the correct order.
 
-This structured pseudocode provides a simplified view of implementing a queue management system using a B-Tree. Let me know if you need further details or modifications!
