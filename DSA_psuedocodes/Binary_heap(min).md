@@ -72,4 +72,4 @@ A **Min-Heap** is a binary heap where the value of each node is less than or equ
 - **Heapify**: Ensure that a node maintains the heap property with respect to its children.
 - **BuildHeap**: Create a valid heap from an unsorted array by applying heapify on all nodes.
 
-The Binary Heap is commonly used for **priority queues**, as it allows fast insertion and extraction of the minimum or maximum element. Let me know if you need additional details or help with specific implementations!
+
