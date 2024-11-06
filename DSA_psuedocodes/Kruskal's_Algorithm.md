@@ -42,4 +42,3 @@
 - **Union-Find**: Use a Union-Find data structure to detect cycles and determine if an edge should be added to the MST.
 - **Building the MST**: Add edges one by one, ensuring no cycles are formed, until all vertices are connected.
 
-This pseudocode gives a clear and efficient way to implement Kruskal's Algorithm. Let me know if you'd like any part of it explained further or modified!
