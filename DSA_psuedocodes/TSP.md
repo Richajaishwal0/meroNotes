@@ -41,4 +41,4 @@
 - **Branch and Bound**: This method systematically explores possible paths and uses lower bound calculations to prune paths that cannot yield a better solution than the current best.
 - **Efficiency**: By pruning unnecessary branches, the algorithm reduces the number of paths explored compared to brute-force, making it more efficient for medium-sized graphs.
 
-This pseudocode outlines the core structure of the Branch and Bound method for TSP. Let me know if you need more details on the lower bound calculation or any other part of the algorithm!
+
