@@ -35,6 +35,15 @@
    - Call `branchAndBound(1, 0, currentPath, visited)`.
    - Return `bestCost` and `bestPath`.
 
+### Explanation of Terms and Concepts
+- **Level**: Represents the depth of the current path in the solution tree (how many vertices are visited).
+- **currentPath[]**: Stores the vertices visited so far in the path.
+- **visited[]**: Tracks which vertices have been visited to avoid revisiting them.
+- **currentCost**: Cumulative cost of the current path.
+- **bestCost**: The minimum cost found so far across all explored paths.
+- **bestPath[]**: The path with the minimum cost.
+- **calculateLowerBound**: Estimates the minimum possible cost to complete the TSP from the current path.
+  
 ### Summary of the Approach
 - **Branch and Bound**: This method systematically explores possible paths and uses lower bound calculations to prune paths that cannot yield a better solution than the current best.
 - **Efficiency**: By pruning unnecessary branches, the algorithm reduces the number of paths explored compared to brute-force, making it more efficient for medium-sized graphs.
