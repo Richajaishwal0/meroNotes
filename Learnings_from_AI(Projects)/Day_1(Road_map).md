@@ -1,6 +1,6 @@
 # Market Maven: AI-Driven Sales Forecasting for Smarter Supermarkets
 
-## Project Timeline: 45 Days
+<!-- ## Project Timeline: 45 Days-->
 
 ### Week 1: Project Foundation & Data Preparation
 
