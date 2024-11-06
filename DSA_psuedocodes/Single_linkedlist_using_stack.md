@@ -1,4 +1,4 @@
--### **Singly Linked List Using Stack for Insertion and Deletion**
+### **Singly Linked List Using Stack for Insertion and Deletion**
 
 ---
 
