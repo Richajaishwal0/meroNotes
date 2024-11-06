@@ -32,5 +32,3 @@
 - **Initialization**: Set all key values to infinity and use a priority queue to efficiently fetch the vertex with the smallest edge weight.
 - **Building the MST**: Iterate until all vertices are included in the MST, updating key values and parent links as needed.
 - **Output**: Use the `parent[]` array to display the MST.
-
-This pseudocode provides a clear structure for implementing Prim's Algorithm. Let me know if you need any further details or an explanation of a specific part!
