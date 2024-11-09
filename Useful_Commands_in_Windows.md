@@ -1,4 +1,4 @@
-### The Windows operating system features over 280 commands for CMD (Command Prompt). Some commands are specific to Windows servers, while others are available for desktop versions. In both cases, CMD commands communicate directly with the OS and allow to perform various IT automation tasks.
+The Windows operating system features over 280 commands for CMD (Command Prompt). Some commands are specific to Windows servers, while others are available for desktop versions. In both cases, CMD commands communicate directly with the OS and allow to perform various IT automation tasks.
 # Common CMD Commands and Their Uses
 
 ## **File and Directory Management**
