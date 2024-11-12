@@ -1,77 +1,84 @@
-Here's a simplified and structured approach to implementing a **B-Tree-Based Queue System**:
+# B-Tree-Based Queue System
 
----
+## Definition
+A B-Tree-Based Queue System is a data structure that uses a B-Tree to manage a dynamic queue of elements (e.g., customer numbers) while maintaining sorted order. The B-Tree allows for efficient insertion, deletion, and in-order traversal, ensuring that elements are always sorted and accessible in logarithmic time.
 
-### Pseudocode for the B-Tree-Based Queue System
+## Example
+Imagine a queue of customer numbers being processed in sorted order:
+- Initial insertions: 5, 3, 7, 1, 6
+- Expected sorted output after insertion: 1, 3, 5, 6, 7
+Using the B-Tree structure, we insert elements, ensuring they are organized efficiently, and perform an in-order traversal to retrieve them in sorted order.
 
-1. **Define B-Tree Node Structure**:
-   - Each node has:
-     - `keys[]`: Array of keys stored in the node.
-     - `children[]`: Array of child pointers.
-     - `isLeaf`: Boolean indicating if the node is a leaf.
-     - `numKeys`: Current number of keys in the node.
+## Pseudocode
 
-2. **Function: Split Child**
-   - `parent`: The node whose child is full.
-   - `i`: Index of the child to split.
-   - `child`: The full child node.
-   - Create a new node `newChild` to hold the last `t-1` keys of `child`.
-   - If `child` is not a leaf, move its last `t` children to `newChild`.
-   - Insert `newChild` into `parent.children` at index `i + 1`.
-   - Move the middle key of `child` to `parent`.
-   - Update `child` and `parent`'s key counts.
+1. **Define B-Tree Node Structure**  
+   ```plaintext
+   Node:
+      keys[]       // Array to store keys in the node
+      children[]   // Array of child pointers
+      isLeaf       // Boolean indicating if the node is a leaf
+      numKeys      // Number of keys currently in the node
+   ```
 
-3. **Function: Insert Non-Full Node**
-   - `node`: The current node where we want to insert the key.
-   - `key`: The key to be inserted.
-   - If `node` is a leaf:
-     - Insert `key` into `node.keys[]` at the correct position.
-     - Increment `node.numKeys`.
-   - Else:
-     - Find the correct child to insert the key.
-     - If the child is full, call `splitChild()` to make space.
-     - Recur on the correct child to insert the key.
+2. **Split Child Function**  
+   - **Input**: `parent` (the node whose child is full), `index` (location of child to split), `child` (the full child node).
+   - **Process**:
+     - Create `newChild` for the last `t-1` keys of `child`.
+     - If `child` is not a leaf, move its last `t` children to `newChild`.
+     - Insert `newChild` into `parent.children[]` at `index + 1`.
+     - Move `child`'s middle key to `parent.keys[]` at `index`.
+     - Update `numKeys` for `parent` and `child`.
 
-4. **Function: Insert Key**
-   - `key`: The key to insert into the B-Tree.
-   - If `root` is full:
-     - Create a new node `newRoot`.
-     - `newRoot` becomes the new root, and `root` becomes its child.
-     - Call `splitChild()` on `newRoot` to split `root`.
-     - Call `insertNonFull()` on `newRoot` to insert the key.
-     - Set `root = newRoot`.
-   - Else:
-     - Call `insertNonFull()` on `root`.
+3. **Insert into Non-Full Node Function**  
+   - **Input**: `node` (node to insert key), `key` (key to insert).
+   - **Process**:
+     - If `node` is a leaf:
+       - Insert `key` in `node.keys[]` in sorted order.
+       - Increment `node.numKeys`.
+     - If not a leaf:
+       - Locate the child for `key` insertion.
+       - If child is full, call `splitChild()`.
+       - Recursively call `insert into non-full node` on the child.
 
-5. **Function: Delete Key (Simplified)**
-   - `key`: The key to delete from the B-Tree.
-   - If the key is in a leaf node:
-     - Remove the key directly.
-   - If the key is in an internal node:
-     - If the preceding or succeeding child has at least `t` keys:
-       - Replace the key with the predecessor or successor and delete recursively.
-     - Else:
-       - Merge the key and children, then delete from the merged node.
-   - If the key is not found, recur down the tree.
-   - Ensure the child node has at least `t` keys before descending.
+4. **Insert Key Function**  
+   - **Input**: `key` (key to insert).
+   - **Process**:
+     - If `root` is full:
+       - Create `newRoot`, set `root` as its child.
+       - Call `splitChild()` on `newRoot`.
+       - Insert `key` into `newRoot`.
+       - Update `root`.
+     - If not full, call `insert into non-full node` on `root`.
 
-6. **Function: In-Order Traversal**
-   - If `node` is not `NULL`:
+5. **Delete Key Function**  
+   - **Input**: `key` (key to delete).
+   - **Process**:
+     - If `key` is in a leaf, remove it.
+     - If in an internal node:
+       - Replace with predecessor or successor if children have `t` keys.
+       - Otherwise, merge nodes and delete from merged node.
+     - If `key` not found, descend with `t` keys in each child before moving down.
+
+6. **In-Order Traversal Function**  
+   - **Input**: `node` (node to traverse).
+   - **Process**:
      - Traverse `node.children[0]`.
      - For each key in `node.keys[]`:
        - Print the key.
-       - Traverse the corresponding child in `node.children[]`.
+       - Traverse each corresponding child in `node.children[]`.
 
-7. **Main Function**
-   - Initialize `root` as `NULL`.
-   - For each `customerNumber` in the input sequence:
-     - `InsertKey(customerNumber)`.
-   - Perform an in-order traversal to print the numbers in sorted order.
+7. **Main Function**  
+   - **Process**:
+     - Initialize `root` as an empty node.
+     - For each `customerNumber` in input:
+       - Call `Insert Key` with `customerNumber`.
+     - Call `In-Order Traversal` on `root` to output sorted order.
 
----
+## Time Complexity
+- **Insertion**: \( O(\log n) \) per insertion due to splitting and balancing.
+- **Deletion**: \( O(\log n) \) per deletion.
+- **Traversal**: \( O(n) \), since each node is visited in order.
 
-### Summary of the Approach
-- The B-Tree keeps keys sorted and balanced, optimizing insertion and deletion.
-- Splitting and merging ensure that the tree remains balanced.
-- An in-order traversal is used to retrieve the customer numbers in the correct order.
-
+## Sample Input and Output
+- **Input Sequence**: `5, 3, 7, 1, 6`
+- **Sorted Output**: `1, 3, 5, 6, 7`
