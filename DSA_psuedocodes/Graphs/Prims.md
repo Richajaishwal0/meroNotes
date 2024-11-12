@@ -1,4 +1,4 @@
-## Prims algorithm to find the shortest path
+## Prims algorithm 
 ### Definition
 Prim's algorithm is a greedy algorithm that finds a Minimum Spanning Tree (MST) for a weighted, undirected graph. The MST is a subset of the edges in the graph that connects all vertices together without any cycles and with the minimum possible total edge weight.
 
