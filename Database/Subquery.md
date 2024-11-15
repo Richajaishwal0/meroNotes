@@ -21,3 +21,24 @@ ex: Find the employees in each department who earn more than the average salary 
 ```sql
   select employee_name from employees e1 where salary > (select avg(sal) from employee e2 where e2.dept_name=e1.dept_name);
 ```
+### Nested subquery
+subquery with in subquery
+**Note**: 
+``` sql
+with alias as
+     (query) 
+    # THis can be used to give the name to the subquery so as to use it repetedly.
+```
+
+## Uses of subquery
+Select clause
+```sql
+select *, (case when salary> (select avg(salary) from employee)
+              then 'Higher then averge'
+              else null
+          end) as remarks
+from employee;
+```
+Where clause
+Having clause
+From clause
