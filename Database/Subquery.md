@@ -39,6 +39,21 @@ select *, (case when salary> (select avg(salary) from employee)
           end) as remarks
 from employee;
 ```
-Where clause
-Having clause
-From clause
+It is not good to use select inside select. So we will use join to change it as
+```sql
+select *
+  case when salary> avg_sal.sal
+              then 'Higher then averge'
+              else null
+          end) as remarks
+from employee cross join (select avg(salary) from employee) avg_sal;
+
+```
+Where clause - already shown up
+From clause already shown up
+Having clause:
+``` sql
+select store_name, sum(quantity)
+from sales group by store_name
+having sum(quantity)> (select avg(salary) from sales);
+```
