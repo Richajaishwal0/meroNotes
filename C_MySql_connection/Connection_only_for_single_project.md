@@ -1,6 +1,6 @@
 # Connecting MySQL with Dev C++ for C/C++ Programming
 
-## Steps to Connect Dev C++ with MySQL by Creating a Projec
+## Steps to Connect Dev C++ with MySQL by Creating a Project
 
 ### 1. Create a New Project in Dev C++
 First, create a new project in Dev C++ inside a designated folder. Below are some references for creating the project :
