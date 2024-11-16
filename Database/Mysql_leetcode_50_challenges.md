@@ -51,4 +51,4 @@ select machine_id,avg(timestamp) from activity group by machine_id;
 | 2          | 4.0280000      |
 
 Important points
-- Subquery can be used to compare between two columns of the same table.
+- Subquery can be used to compare between two columns of the same table
