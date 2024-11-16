@@ -9,6 +9,8 @@
    SELECT COALESCE(first_name, middle_name, last_name, 'No Name') AS FullName FROM employees;
 ```
 This query will return the first available name from the three columns, or 'No Name' if all are null, ensuring meaningful results in your application.
+
+6. ifnull(,0): This function will give 0 where the output is null.
  ## Self joining can  be used to compare between two rows of the same table
  ex: 
  
@@ -52,3 +54,4 @@ select machine_id,avg(timestamp) from activity group by machine_id;
 
 Important points
 - Subquery can be used to compare between two columns of the same table
+  ifnu
