@@ -57,3 +57,4 @@ select store_name, sum(quantity)
 from sales group by store_name
 having sum(quantity)> (select avg(salary) from sales);
 ```
+Moreover, subquery can also be used with insert clause.
