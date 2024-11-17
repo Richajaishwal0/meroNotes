@@ -5,6 +5,73 @@ In inheritance there are two classes they are:
 **:** is used to inherit the base class
 Types of inheritance in c++
 
+```mermaid
+classDiagram
+    %% Single Inheritance Example: Car -> ElectricCar
+    class Car {
+        +drive()
+    }
+    class ElectricCar {
+        +chargeBattery()
+    }
+    Car <|-- ElectricCar : Single Inheritance
+
+    %% Multiple Inheritance Example: Camera, Phone -> Smartphone
+    class Camera {
+        +takePhoto()
+    }
+    class Phone {
+        +makeCall()
+    }
+    class Smartphone {
+        +useApp()
+    }
+    Camera <|-- Smartphone : Multiple Inheritance
+    Phone <|-- Smartphone : Multiple Inheritance
+
+    %% Multilevel Inheritance Example: Animal -> Mammal -> Dog
+    class Animal {
+        +eat()
+    }
+    class Mammal {
+        +giveBirth()
+    }
+    class Dog {
+        +bark()
+    }
+    Animal <|-- Mammal : Multilevel Inheritance
+    Mammal <|-- Dog : Multilevel Inheritance
+
+    %% Hierarchical Inheritance Example: Shape -> Circle, Rectangle
+    class Shape {
+        +draw()
+    }
+    class Circle {
+        +calculateArea()
+    }
+    class Rectangle {
+        +calculatePerimeter()
+    }
+    Shape <|-- Circle : Hierarchical Inheritance
+    Shape <|-- Rectangle : Hierarchical Inheritance
+
+    %% Hybrid Inheritance/Diamond Problem Example: A -> B, C -> D
+    class A {
+        +display()
+    }
+    class B {
+    }
+    class C {
+    }
+    class D {
+        +resolveDiamondProblem()
+    }
+    A <|-- B : Virtual Inheritance
+    A <|-- C : Virtual Inheritance
+    B <|-- D : Hybrid Inheritance
+    C <|-- D : Hybrid Inheritance
+```
+
 ![image](https://github.com/user-attachments/assets/0df4a113-7823-48ec-9a7c-7d73c6439f05)
 
 
@@ -138,7 +205,6 @@ tut tut
 ```
 5. Multilevel Inheritance
  
-**Note**: The **diamond problem** in C++ occurs in multiple inheritance when a derived class inherits from two base classes that share a common ancestor, leading to ambiguity and duplicate instances of the ancestor. To solve this, use **virtual inheritance** in the intermediate base classes to ensure only a single shared instance of the common ancestor exists. The most derived class should explicitly initialize the shared base class in its constructor. Virtual inheritance eliminates ambiguity, ensures efficient memory usage, and simplifies member access.
 Code:
 ```c++
 #include <iostream>
@@ -173,6 +239,9 @@ ramu
 ram
 ```
 5. Hybrid inheritance
+
+**Note**: The **diamond problem** in C++ occurs in multiple inheritance when a derived class inherits from two base classes that share a common ancestor, leading to ambiguity and duplicate instances of the ancestor. To solve this, use **virtual inheritance** in the intermediate base classes to ensure only a single shared instance of the common ancestor exists. The most derived class should explicitly initialize the shared base class in its constructor. Virtual inheritance eliminates ambiguity, ensures efficient memory usage, and simplifies member access.
+
 Code:
 ```c++
 #include <iostream>
