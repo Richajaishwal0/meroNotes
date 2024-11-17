@@ -136,8 +136,8 @@ Output:
 tut tut
 tut tut
 ```
-4. Multilevel Inheritance
-5. 
+5. Multilevel Inheritance
+ 
 **Note**: The **diamond problem** in C++ occurs in multiple inheritance when a derived class inherits from two base classes that share a common ancestor, leading to ambiguity and duplicate instances of the ancestor. To solve this, use **virtual inheritance** in the intermediate base classes to ensure only a single shared instance of the common ancestor exists. The most derived class should explicitly initialize the shared base class in its constructor. Virtual inheritance eliminates ambiguity, ensures efficient memory usage, and simplifies member access.
 Code:
 ```c++
