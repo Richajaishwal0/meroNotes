@@ -1,15 +1,17 @@
+## 1. **Square Pattern**
+
 ```
 * * * *
 * * * *
 * * * *
 * * * *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -25,19 +27,22 @@ int main()
 }
 ```
 
-```
-****
-*  *
-*  *
-****
+---
+
+## 2. **Hollow Square Pattern**
 
 ```
+****
+*  *
+*  *
+****
+```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -60,18 +65,22 @@ int main()
 }
 ```
 
+---
+
+## 3. **Right Aligned Square of Stars**
+
 ```
  ****
   ****
    ****
     ****
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -91,19 +100,22 @@ int main()
 }
 ```
 
+---
+
+## 4. **Left Aligned Square of Stars**
+
 ```
      ****
     ****
    ****
   ****
-
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -122,18 +134,23 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 5. **Right-Angled Triangle Pattern**
+
 ```
 *
 **
 ***
 ****
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -149,18 +166,22 @@ int main()
 }
 ```
 
+---
+
+## 6. **Pyramid Pattern**
+
 ```
    *
   ***
  *****
 *******
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -178,18 +199,23 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 7. **Hollow Pyramid Pattern**
+
 ```
    *
   * *
  *   *
 *******
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -213,18 +239,23 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 8. **Inverted Pyramid Pattern**
+
 ```
 *******
  *****
   ***
    *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -242,18 +273,23 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 9. **Inverted Hollow Pyramid**
+
 ```
 *******
  *   *
   * *
    *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -280,6 +316,11 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 10. **Diamond Pattern**
+
 ```
 *
 **
@@ -289,12 +330,12 @@ int main()
 **
 *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -321,6 +362,11 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 11. **Inverted Diamond Pattern**
+
 ```
    *
   **
@@ -330,12 +376,12 @@ int main()
   **
    *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 { int n=4;
@@ -370,6 +416,11 @@ int main()
     return 0;
 }
 ```
+
+---
+
+## 12. **Full Diamond Pattern**
+
 ```
    *
   ***
@@ -379,12 +430,12 @@ int main()
   ***
    *
 ```
+
 ```c++
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 
 int main()
 {    int n=4;
@@ -418,4 +469,4 @@ int main()
     }
     return 0;
 }
-```
+``` 
