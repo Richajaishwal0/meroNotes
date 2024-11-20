@@ -54,4 +54,9 @@ select machine_id,avg(timestamp) from activity group by machine_id;
 
 Important points
 - Subquery can be used to compare between two columns of the same table
-
+-Regex in Mysql
+ex:
+```sql
+select * from users where 
+mail regexp '^[a-zA-Z][a-zA-Z0-9_.-]*@leetcode[.]com$';
+```
