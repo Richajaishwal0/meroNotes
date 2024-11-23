@@ -1,6 +1,6 @@
 ### Pseudocode for Binary Heap (Min-Heap)
 
-A **Min-Heap** is a binary heap where the value of each node is less than or equal to the values of its children. For a **Max-Heap**, the opposite is true, where the value of each node is greater than or equal to its children.
+A **Min-Heap** is a binary heap where the value of each node is less than or equal to the values of its children. For a **Max-Heap**, the opposite is true, where the value of each node is greater than or equal to its children
 
 ---
 
