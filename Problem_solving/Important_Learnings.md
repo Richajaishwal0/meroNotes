@@ -51,3 +51,12 @@ public:
   
 };
 ```
+** Access the single element from the set
+```
+*setname.begin(); to access the first element
+to access the element at 2nd index.
+auto it=setname.begin();
+// Move iterator to the third element (index 2)
+std::advance(it, 2);
+cout <<*it<<endl;
+```
