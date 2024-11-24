@@ -56,3 +56,23 @@ overwhelmed: have a strong emotional effect on.
 ```
 retreat: A place where you can go to be alone , away froom either enemies or from any difficulties.
 ```
+
+```
+humility: lack of pride and arrogance
+```
+ex:
+
+```
+meeknes:(namrata)
+```
+ex: All his friends make fun of him for his meekness.
+
+```
+uttered: spoken aloud or expression in words.
+```
+
+ex: She uttered a cry of suprise.
+```
+Summon: Gather, call for something 
+```
+ex: She summoned the courage to speak.
