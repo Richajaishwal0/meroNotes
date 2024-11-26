@@ -26,3 +26,28 @@
 4 45
 5
 ```
+## Maximums subarray  problem using brutch force approach
+```c++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int size=nums.size();
+        int st,end;
+        int cs;
+        int max_=INT_MIN;
+        for(int st=0;st<size;st++)
+        {       cs=0;
+            for (int end=st;end<size;end++)
+            {
+                cs+=nums[end];
+                max_=max(cs,max_);
+            }
+        }
+        return max_;
+    }
+};
+```
+**Note** Time complexity is **O(n^2)**
+## We will use kadane's algorithm which reduces the time complexity to **O(n)**
+Approach
+Here, we reset the current_sum to 0 if it is negative as 0>negative value which when included doesnt give the max sum.
