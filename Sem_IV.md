@@ -18,3 +18,4 @@ Backend part
 [Express js](https://www.geeksforgeeks.org/express-js/)
 [Mongoose](https://www.geeksforgeeks.org/mongoose-tutorial/)
 Estimated time ( 5th december-June).
+Step-1 revising html,css and js->make portfolio time duration max 15 days. from 6 dec
