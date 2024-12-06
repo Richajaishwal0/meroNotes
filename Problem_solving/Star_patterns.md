@@ -503,3 +503,132 @@ int main() {
     return 0;
 }
 ```
+## 14. **Inverted Pattern**
+```
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+```
+```c++
+#include <iostream>
+using namespace std;
+
+int  main()
+{
+	int i,j;
+	for (i=1;i<=5;i++)
+	{
+		for (j=1;j<=6-i;j++)
+		{
+			cout<<j<<" ";;
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+```
+## 15. **0-1 Pattern **
+```
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+```
+```c++
+#include <iostream>
+using namespace std;
+
+int  main()
+{
+	int i,j;
+	for (i=1;i<=5;i++)
+	{
+		for (j=1;j<=i;j++)
+		{	
+			if ((i+j)%2==0)
+			{
+				cout<<1<<" ";	
+			}
+			else
+			{
+				cout<<0<<" ";
+			}
+				
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+```
+## 16. **NumberPattern **
+```
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+
+```
+```c++
+#include <iostream>
+using namespace std;
+
+int  main()
+{
+	int i,j,k;
+	int n=5;
+	for (i=1;i<=n;i++)
+	{
+		for (k=0;k<n-i;k++)
+		{
+			cout<<" ";
+		}
+		for (j=1;j<=i;j++)
+		{	
+			cout<<j<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+```
+## 17. ** Palindrome Pattern **
+```
+        1
+      2 1 2
+    3 2 1 2 3
+  4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+
+```
+```c++
+#include <iostream>
+using namespace std;
+
+int  main()
+{
+	int i,j,k;
+	int n=5;
+	for (i=1;i<=n;i++)
+	{
+		for (k=0;k<n-i;k++)
+		{
+			cout<<"  ";
+		}
+		for (j=i;j>=1;j--)
+		{	
+			cout<<j<<" ";
+		}
+		for (j=2;j<=i;j++)
+		{	
+			cout<<j<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+```
