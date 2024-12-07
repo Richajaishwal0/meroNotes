@@ -1,0 +1,1 @@
+- There are n*(n+1)/2 subarrays in an array of size n.
