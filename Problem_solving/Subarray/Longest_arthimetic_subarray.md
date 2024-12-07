@@ -4,7 +4,7 @@
 using namespace std;
 
 /* Function to sort array using insertion sort */
-int insertionSort( )
+int longestSubarray( )
 {   
     
      int arr[] = { 2,4,6,8,12,16,20,24};
@@ -31,7 +31,7 @@ int insertionSort( )
 // Driver method
 int main()
 {
-    cout<<insertionSort();
+    cout<<longestSubarray();
 
 
     return 0;
