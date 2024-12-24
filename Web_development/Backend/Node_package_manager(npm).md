@@ -27,7 +27,7 @@ npm init \\ use to create a package.json file
    npm install express
   ```
   
-  ```json
+    ```json
   {
   "name": "tut69",
   "version": "1.0.0",
@@ -64,6 +64,17 @@ npm init \\ use to create a package.json file
   "devDependencies": {
     "nodemon": "^3.1.9"
   }
-}
-
+  }
+  ```
+## Some important knowledges
+Inorder to install nodemon (a package to run server) gloablly 
+```
+npm install nodemon --global
+```
+and locally 
+```
+npm install nodeman --save-dev
+```
+check the version of dependencies in npm
+``` npm view modulename version
 ```
