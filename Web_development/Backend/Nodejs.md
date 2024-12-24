@@ -161,3 +161,33 @@ file index.html
 All the other files like contact, services and about has same nav bar code as of now. 
 Output:
 ![image](https://github.com/user-attachments/assets/628f125f-059d-4412-b3a9-6a119645b935)
+
+### Making and exporting the custom modules in node js
+- make a file name mod.js and other file  name index.js
+- create any function that is to be exported
+- export the module or function using the given syntax
+
+mode.js
+```js
+console.log("This is module.");
+
+function average(arr)
+{
+    let sum=0;
+    arr.forEach(element=>{
+        sum+=element;
+    });
+    return sum/arr.length;
+}
+module.exports=average;
+```
+```index.js
+console.log("This is index");
+const average=require('./mod');
+console.log(average([3,4]));
+
+```
+![image](https://github.com/user-attachments/assets/c8e597b8-ff5e-41cf-bdb3-b51b1cde17b8)
+
+
+
