@@ -189,5 +189,36 @@ console.log(average([3,4]));
 ```
 ![image](https://github.com/user-attachments/assets/c8e597b8-ff5e-41cf-bdb3-b51b1cde17b8)
 
+### Exporting the multiple modules from mod.js
+- object can be made for module.exports and multiple key-value pairs can be passed
+- 
+mod.js
+```js
+console.log("This is module.");
 
+function average(arr)
+{
+    let sum=0;
+    arr.forEach(element=>{
+        sum+=element;
+    });
+    return sum/arr.length;
+}
+module.exports={
+    avg:average,
+    name:"harry",
+    repo:"github"
+}
+```
 
+index.js
+```js
+console.log("This is index");
+const mod=require('./mod');
+console.log(mod.avg([3,4]))
+console.log(mod.name);
+console.log(mod.repo);
+// console.log(ans);
+```
+Output:
+![image](https://github.com/user-attachments/assets/f3142872-b776-4d68-83bd-489545e38557)
