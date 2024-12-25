@@ -44,6 +44,9 @@ app.set("views",path.join(__dirname,'views'));
 app.get("/demo",(req,res)=>{
     res.status(200).render('demo',{title:'Hey richa',message:"how are you?"})
 })
+app.listen(port,()=>{
+    console.log(`This application is running on port ${port}`);
+})
 ```
 views/demo.pug
 ```pug
