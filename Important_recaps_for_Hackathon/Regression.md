@@ -144,7 +144,22 @@ rf = RandomForestRegressor(n_estimators=100, random_state=42).fit(X_train, y_tra
    ```python
    data = pd.get_dummies(data, drop_first=True)
    ```
-
+ex: 
+```py
+   import pandas as pd
+   
+   # Original DataFrame
+   df = pd.DataFrame({
+       'ID': [1, 2, 3, 4],
+       'Color': ['Red', 'Blue', 'Green', 'Red']
+   })
+   
+   # Apply get_dummies
+   df_dummies = pd.get_dummies(df['Color'])
+   
+   # Result
+   print(df_dummies)
+```
 3. **Check for Multicollinearity**:
    - Use a correlation matrix to identify highly correlated features.
    ```python
