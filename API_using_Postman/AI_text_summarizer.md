@@ -1,5 +1,6 @@
 Here we will discuss about the application of API using Postman.
 We will build a text summarizer app that used the uses the hugging face API to summarize the text instead of building the model from the scratch.
+
 Its includes the frontend and backend folder . [Here]() you will find the detailed structure of the folders.
 Since this is the tutorial on how to implement we will focus on the steps we followed to make the project listed
 [here]().
