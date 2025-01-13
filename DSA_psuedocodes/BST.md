@@ -2,7 +2,7 @@
 
 1. **Define Binary Search Tree (BST) Node Structure**:
    - Each node has:
-     - `value`: The value stored in the node.
+     - `value`: The value stored in the node. 
      - `left`: Pointer to the left child node.
      - `right`: Pointer to the right child node.
 
