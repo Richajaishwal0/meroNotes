@@ -1,4 +1,4 @@
-# Connect Sql and Dev C++ globally(for overall  programs).
+# Connect Sql and Dev C++ globally(for overall  programs). 
 ## Default Installation Path:
 1.Open File Explorer.<hr>
 2.Navigate to the Connector Installation Directory:<hr>
