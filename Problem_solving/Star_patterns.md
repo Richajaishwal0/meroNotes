@@ -760,3 +760,56 @@ A B C
 A B C D
 A B C D E
 ```
+4 
+```cpp
+#include <iostream>
+using namespace std;
+int main()
+{   
+    for (int i=0;i<5;i++)
+    {       char a='A';
+        for (int j=0;j<=5-i-1;j++)
+        {
+            cout<<a++<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+```
+Output:
+```
+A B C D E 
+A B C D 
+A B C 
+A B 
+A 
+```
+5
+```cpp
+#include <iostream>
+using namespace std;
+int main()
+{   char a='A';  
+    for (int i=0;i<5;i++)
+    {  
+        for (int j=0;j<=i;j++)
+        {
+            cout<<a<<" ";
+        }
+        a++;
+        cout<<endl;
+    }
+
+    return 0;
+}
+```
+Output:
+```
+A
+B B
+C C C
+D D D D
+E E E E E
+```
