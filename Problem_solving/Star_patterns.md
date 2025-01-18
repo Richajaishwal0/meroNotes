@@ -728,10 +728,35 @@ int main()
 ```
 Output:
 ```
-```
 1 
 2 3 
 4 5 6 
 7 8 9 10 
 11 12 13 14 15 
+```
+3 
+```cpp
+#include <iostream>
+using namespace std;
+int main()
+{   
+    for (int i=0;i<5;i++)
+    {       char a='A';
+        for (int j=0;j<=i;j++)
+        {
+            cout<<a++<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+```
+Output:
+```
+A
+A B
+A B C
+A B C D
+A B C D E
 ```
