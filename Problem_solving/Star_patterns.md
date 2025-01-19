@@ -852,3 +852,38 @@ Output:
   A B C B A 
 A B C D C B A 
 ```
+7
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{   
+    char a;
+    char in=4;
+    for (int i=0;i<5;i++)
+    {       a='A';
+    
+        for (int j=0;j<=i;j++)
+        {
+            cout<<char(a+in)<<" ";
+            // in++;
+            a++;
+        }
+        in--;
+         cout<<endl;
+    }
+    
+   
+        
+    return 0;
+}
+```
+Output:
+```
+E 
+D E 
+C D E 
+B C D E 
+A B C D E 
+```
