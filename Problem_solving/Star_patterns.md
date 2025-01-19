@@ -813,3 +813,42 @@ C C C
 D D D D
 E E E E E
 ```
+6
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{   char a;
+    for (int i=1;i<=4;i++)
+    {
+         a='A'; 
+        for (int k=1;k<4-i+1;k++)
+        {
+            cout<<"  ";
+        }
+        for (int j=1;j<=2*i-1;j++)
+        {
+            cout<<a<<" ";
+            if (j<=(2*i-1)/2)
+            {   
+                a++;
+            }
+            else{
+                a--;
+            }
+             
+        }
+        cout<<endl;
+        
+    }
+    return 0;
+}
+```
+Output:
+```
+      A 
+    A B A 
+  A B C B A 
+A B C D C B A 
+```
