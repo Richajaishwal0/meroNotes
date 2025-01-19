@@ -887,3 +887,70 @@ C D E
 B C D E 
 A B C D E 
 ```
+8
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{  
+    
+    for (int i=0;i<5;i++)
+    {
+       for (int j=0;j<5-i;j++)
+       {
+           cout<<"*";
+       }
+       for (int k=0;k<2*i+1;k++)
+       {
+           if (k!=0)
+           {
+             cout<<" ";   
+           }
+       }
+
+       for (int j=0;j<5-i;j++)
+       {
+           cout<<"*";
+       }
+        cout<<endl;
+        
+    }
+for (int i=0;i<5;i++)
+{
+   for (int j=0;j<=i;j++)
+       {
+           cout<<"*";
+       }
+       for (int k=0;k<2*(4-i)+1;k++)
+       {
+           if (k!=0)
+           {
+             cout<<" ";   
+           }
+       }
+        for (int l=0;l<=i;l++)
+       {
+           cout<<"*";
+       }
+       cout<<endl;
+}
+    
+   
+        
+    return 0;
+}
+```
+Output:
+```
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+```
