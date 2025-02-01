@@ -67,3 +67,13 @@ Output:
 5			5
 ```
 ![image](https://github.com/user-attachments/assets/46720278-9ddc-4915-a0d0-44ca68c18112)
+
+### Complexity Analysis
+#### Time Complexity (When graph is connected):
+
+Best Case: O(E) (when distance array after 1st and 2nd relaxation are the same)
+Average Case: O(V*E)
+Worst Case: O(V*E)
+#### Time Complexity (When graph is disconnected): O(E*(V^2))
+
+Auxiliary Space: O(V)
