@@ -93,7 +93,6 @@ void dfs(unordered_map<int,vector<int>> &adj)
 {
     vector<bool>visited(adj.size(),false);
     int srtnode=adj.begin()->first;
-    cout<<srtnode<<"\n";
     dfsrec(adj,visited,srtnode );
 }
 void addEdge(unordered_map<int,vector<int>> &adj, int a, int b)
@@ -130,6 +129,5 @@ Output:
 7:3,9,
 4:3,1,9,
 3:4,7,9,
-1
 1 4 3 7 9 
 ```
