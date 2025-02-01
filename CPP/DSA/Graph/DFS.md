@@ -68,3 +68,68 @@ Output:
 ```
 0 1 2 4 3
 ```
+** Note ** : What if there is no continuous range of elements in the graph?? 
+Solution: Use **hashmap** with type int, vector 
+here is the example code :
+```cpp
+#include <iostream>
+#include <vector> 
+#include <unordered_map>
+using namespace std;
+
+void dfsrec(unordered_map<int,vector<int>> &adj,vector<bool> & visited, int i)
+{
+    visited[i]= true;
+    cout<<i<<" ";
+    for (int x: adj[i])
+    {
+        if (!visited[x])
+        {
+            dfsrec(adj,visited,x);
+        }
+    }
+}
+void dfs(unordered_map<int,vector<int>> &adj)
+{
+    vector<bool>visited(adj.size(),false);
+    int srtnode=adj.begin()->first;
+    cout<<srtnode<<"\n";
+    dfsrec(adj,visited,srtnode );
+}
+void addEdge(unordered_map<int,vector<int>> &adj, int a, int b)
+{
+    adj[a].push_back(b);
+    adj[b].push_back(a);
+}
+
+int main()
+{
+    unordered_map<int,vector<int>> adj;
+    vector<vector<int>> edges={{3,4},{3,7},{3,9},{4,1},{4,9},{1,9},{7,9}};
+    for (auto & x: edges)
+    {
+        addEdge(adj,x[0],x[1]);
+    }
+    for (auto & x:adj)
+    {
+        cout<<x.first<<":";
+        for (auto & i: x.second)
+        {
+            cout<<i<<",";
+        }
+        cout<<"\n";
+    }
+    dfs(adj);
+    return 0;
+}
+```
+Output:
+```
+1:4,9,
+9:3,4,1,7,
+7:3,9,
+4:3,1,9,
+3:4,7,9,
+1
+1 4 3 7 9 
+```
