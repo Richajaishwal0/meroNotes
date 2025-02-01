@@ -65,4 +65,78 @@ Output:
 ```
 BFS: 0 1 2 3 4
 ```
-https://www.geeksforgeeks.org/find-the-level-of-given-node-in-an-undirected-graph/
+** Note ** : What if there is no continuous range of elements in the graph?? 
+Solution: Use **hashmap** with type int, vector 
+here is the example code :
+Code:
+```
+#include <iostream>
+#include <vector> 
+#include <unordered_map>
+#include <queue>
+using namespace std;
+
+void bfsutil(unordered_map<int,vector<int>> &adj,vector<bool> & visited, int i,queue<int> &q)
+{
+    visited[i]= true;
+    q.push(i);
+    while (!q.empty())
+    {
+        int curr=q.front();
+         cout<<curr<<" ";
+         q.pop();
+         for (int x: adj[curr])
+         {
+             if (!visited[x])
+             {
+                 visited[x]=true;
+                 q.push(x);
+             }
+         }
+        
+    }
+}
+   
+void bfs(unordered_map<int,vector<int>> &adj)
+{
+    vector<bool>visited(adj.size(),false);
+    queue<int>q;
+    int srtnode=adj.begin()->first;
+   bfsutil(adj,visited,srtnode,q);
+}
+void addEdge(unordered_map<int,vector<int>> &adj, int a, int b)
+{
+    adj[a].push_back(b);
+    adj[b].push_back(a);
+}
+
+int main()
+{
+    unordered_map<int,vector<int>> adj;
+    vector<vector<int>> edges={{3,4},{3,7},{3,9},{4,1},{4,9},{1,9},{7,9}};
+    for (auto & x: edges)
+    {
+        addEdge(adj,x[0],x[1]);
+    }
+    for (auto & x:adj)
+    {
+        cout<<x.first<<":";
+        for (auto & i: x.second)
+        {
+            cout<<i<<",";
+        }
+        cout<<"\n";
+    }
+    bfs(adj);
+    return 0;
+}
+```
+Output:
+```
+1:4,9,
+9:3,4,1,7,
+7:3,9,
+4:3,1,9,
+3:4,7,9,
+1 4 9 3 7 
+```
