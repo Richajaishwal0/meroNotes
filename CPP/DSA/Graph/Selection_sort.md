@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {   
     int ans[]={4,1,0,88,4,-7};
-    // Bubble sort 
+    // selection sort 
     int n=sizeof(ans)/sizeof(ans[0]);
     
     for (int i=0;i<n;i++)
