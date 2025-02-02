@@ -1,7 +1,7 @@
 
 ### The Floyd Warshall Algorithm is an all pair shortest path algorithm unlike Dijkstra and Bellman Ford which are single source shortest path algorithms. This algorithm works for both the directed and undirected weighted graphs can handle graphs with both positive and negative edge weights. But, it does not work for the graphs with negative cycles (where the sum of the edges in a cycle is negative). It follows Dynamic Programming approach to check every possible path going via every possible node in order to calculate shortest distance between every pair of nodes.
 Code
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include <limits.h>
