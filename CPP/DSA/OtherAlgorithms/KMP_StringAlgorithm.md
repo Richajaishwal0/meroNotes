@@ -1,7 +1,7 @@
 1. Brutch Force Approach
    Code:
-   ```
-   #include <iostream>
+```cpp
+#include <iostream>
 #include <string>
 
 using namespace std;
