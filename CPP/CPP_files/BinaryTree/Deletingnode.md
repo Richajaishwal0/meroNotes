@@ -3,7 +3,6 @@ The idea is to traverse the tree in level order manner. To perform the Deletion 
 - Starting at the root, find the deepest and rightmost node in the binary tree and the node which we want to delete. 
 - Replace the deepest rightmost node’s data with the node to be deleted. 
 - Then delete the deepest rightmost node.
-
   ![image](https://github.com/user-attachments/assets/34d31c21-6807-4fe8-9edb-fba6ba6e4eb7)
   
 Code
