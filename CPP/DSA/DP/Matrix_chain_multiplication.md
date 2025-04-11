@@ -76,7 +76,7 @@ int main() {
 
 ```
 Brutch Force 
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include <climits>
