@@ -1,3 +1,4 @@
+[DBMS](https://www.geeksforgeeks.org/commonly-asked-dbms-interview-questions/)
 # Some important Topics to be seen before interview
 
 ![image](https://github.com/user-attachments/assets/38ce989d-d978-4d98-b163-152b68f8ab47)
