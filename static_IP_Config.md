@@ -11,7 +11,6 @@ Here, You have to follow the simple steps:
 ### 1. Go to the command prompt and type "ncpa.cpl" as given:
 ```
 ncpa.cpl
-
 ```
 ### 2. You will  get the n number of connections that your system is connected.
 ![image](https://github.com/user-attachments/assets/872cdc1a-2838-4798-bd0a-e1414e6f6f79)
