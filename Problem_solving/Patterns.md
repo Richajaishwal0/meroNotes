@@ -78,3 +78,4 @@
 20. Trie (Prefix Tree): Ideal for efficient retrieval of keys in a dataset of strings. It's commonly used for features like autocomplete or spell check.
 ## More:
 ### [Reference](https://dev.to/arslan_ah/20-essential-coding-patterns-to-ace-your-next-coding-interview-32a3)
+### [Youtube link](https://youtu.be/tNm_NNSB3_w?si=nwaINufMWCGdK-88)
