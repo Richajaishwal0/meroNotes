@@ -33,7 +33,7 @@ You'll use **NLP** to extract useful words/phrases from resumes and match them t
 | Concept                   | Library                               |
 | ------------------------- | ------------------------------------- |
 | Noun Phrase Extraction    | `TextBlob`  [reference](https://textblob.readthedocs.io/en/dev/quickstart.html)                          |
-| Tokenization, POS tagging | `TextBlob`, `spaCy`                   |
+| Tokenization, POS tagging | `TextBlob`, `spaCy`  [reference1](https://www.linkedin.com/pulse/spacy-sentiment-analysis-easy-way-analyze-text-vitor-mesquita-zo83f/) [reference2](https://spacytextblob.netlify.app/)            |
 | Sentence Embedding        | `sentence-transformers`               |
 | Semantic Similarity       | `cosine similarity`, `util.cos_sim()` |
 
