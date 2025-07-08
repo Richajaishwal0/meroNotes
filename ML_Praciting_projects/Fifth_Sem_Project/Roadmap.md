@@ -129,9 +129,9 @@ To keep your code bug-free:
 | ---------------------------------------------------------- | -------- |
 | ✅ Refresher on Pandas & NumPy                              | 1 day    |
 | ✅ Learn TextBlob for keyword extraction                    | 1 day    |
-| ✅ Learn SentenceTransformers + cosine similarity           | 1–2 days |
-| ✅ Understand O\*NET database structure (explore the files) | 1 day    |
-| ✅ Learn basic Streamlit for GUI                            | 1 day    |
+|  Learn SentenceTransformers + cosine similarity           | 1–2 days |
+|  Understand O\*NET database structure (explore the files) | 1 day    |
+|  Learn basic Streamlit for GUI                            | 1 day    |
 
 > 🔸 **Outcome**: You’ll have all the core knowledge needed to start building.
 
