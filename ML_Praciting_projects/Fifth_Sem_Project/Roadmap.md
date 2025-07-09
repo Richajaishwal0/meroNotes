@@ -129,7 +129,7 @@ To keep your code bug-free:
 | ---------------------------------------------------------- | -------- |
 | ✅ Refresher on Pandas & NumPy                              | 1 day    |
 | ✅ Learn TextBlob for keyword extraction                    | 1 day    |
-|  Learn SentenceTransformers + cosine similarity           | 1–2 days |
+|  Learn SentenceTransformers + cosine similarity  [reference](https://www.youtube.com/watch?v=OlhNZg4gOvA)        | 1–2 days |
 |  Understand O\*NET database structure (explore the files) | 1 day    |
 |  Learn basic Streamlit for GUI                            | 1 day    |
 
