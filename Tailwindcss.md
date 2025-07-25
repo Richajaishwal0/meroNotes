@@ -1,5 +1,5 @@
 
-# Setting Up Tailwind CSS in a Project
+# Setting Up Tailwind CSS in a Project 
 
 ## Prerequisites
 
