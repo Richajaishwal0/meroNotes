@@ -6,7 +6,7 @@ In Haskell, `main ::` is part of the **type signature** that defines the **type 
 
 - **`main`** is the entry point of a Haskell program, similar to the `main` function in C, C++, or Java. It's where the program starts executing.
 - **`::`** is the **type annotation operator**. It indicates that you're about to declare the **type of something**.
-- After the `::`, we specify the **type** of `main`.
+- After the `::`, we specify the **type** of `main`.   
 
 ### **Understanding the `main` function type signature**
 
