@@ -1,3 +1,31 @@
+
+
+
+# C++ Star & Number Pattern Collection
+
+## Index
+
+1. [Square Pattern](#1-square-pattern)
+2. [Hollow Square Pattern](#2-hollow-square-pattern)
+3. [Right Aligned Square of Stars](#3-right-aligned-square-of-stars)
+4. [Left Aligned Square of Stars](#4-left-aligned-square-of-stars)
+5. [Right-Angled Triangle Pattern](#5-right-angled-triangle-pattern)
+6. [Pyramid Pattern](#6-pyramid-pattern)
+7. [Hollow Pyramid Pattern](#7-hollow-pyramid-pattern)
+8. [Inverted Pyramid Pattern](#8-inverted-pyramid-pattern)
+9. [Inverted Hollow Pyramid](#9-inverted-hollow-pyramid)
+10. [Diamond Pattern](#10-diamond-pattern)
+11. [Hollow Diamond Pattern](#11-hollow-diamond-pattern)
+12. [Half Diamond Pattern](#12-half-diamond-pattern)
+13. [Number Pyramid](#13-number-pyramid)
+14. [Floyd's Triangle](#14-floyds-triangle)
+15. [Pascal's Triangle](#15-pascals-triangle)
+16. [Butterfly Pattern](#16-butterfly-pattern)
+17. [Hollow Butterfly Pattern](#17-hollow-butterfly-pattern)
+18. [Zig-Zag Pattern](#18-zig-zag-pattern)
+19. [Numeric Palindrome Pyramid](#19-numeric-palindrome-pyramid)
+
+    
 ## 1. **Square Pattern**
 
 ```
