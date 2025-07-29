@@ -530,7 +530,9 @@ int  main()
 	return 0;
 }
 ```
-## 15. **0-1 Pattern **
+
+## 15. **0-1 Pattern**
+
 ```
 1
 0 1
@@ -564,7 +566,7 @@ int  main()
 	return 0;
 }
 ```
-## 16. **NumberPattern **
+## 16. **NumberPattern**
 ```
     1
    1 2
@@ -596,7 +598,7 @@ int  main()
 	return 0;
 }
 ```
-## 17. ** Palindrome Pattern **
+## 17. **Palindrome Pattern**
 ```
         1
       2 1 2
@@ -632,7 +634,7 @@ int  main()
 	return 0;
 }
 ```
-## Zig-Zag Pattern
+## 18 **Zig-Zag Pattern**
 ```
   *   *
  * * * *
@@ -668,7 +670,8 @@ int  main()
 	return 0;
 }
 ```
-SDE striver sheets patterns questions
+
+## Some of the questions from SDE striver sheets 
 1.
 ```cpp
 #include <iostream>
