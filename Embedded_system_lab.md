@@ -649,4 +649,121 @@ STOP
 ```
 
 
+## 🧠 1. **Data Processing Instructions**
+
+| Instruction | Alias | Full Name                   | Example          | Description                  |      |
+| ----------- | ----- | --------------------------- | ---------------- | ---------------------------- | ---- |
+| `ADD`       | –     | Add                         | `ADD R1, R2, R3` | `R1 = R2 + R3`               |      |
+| `ADC`       | –     | Add with Carry              | `ADC R1, R2, R3` | `R1 = R2 + R3 + Carry`       |      |
+| `SUB`       | –     | Subtract                    | `SUB R1, R2, R3` | `R1 = R2 - R3`               |      |
+| `SBC`       | –     | Subtract with Carry         | `SBC R1, R2, R3` | `R1 = R2 - R3 - (1 - Carry)` |      |
+| `RSB`       | –     | Reverse Subtract            | `RSB R1, R2, R3` | `R1 = R3 - R2`               |      |
+| `RSC`       | –     | Reverse Subtract with Carry | `RSC R1, R2, R3` | `R1 = R3 - R2 - (1 - Carry)` |      |
+| `MOV`       | –     | Move                        | `MOV R1, R2`     | `R1 = R2`                    |      |
+| `MVN`       | –     | Move Not                    | `MVN R1, R2`     | `R1 = ~R2`                   |      |
+| `CMP`       | –     | Compare                     | `CMP R1, R2`     | Sets flags for `R1 - R2`     |      |
+| `CMN`       | –     | Compare Negative            | `CMN R1, R2`     | Sets flags for `R1 + R2`     |      |
+| `TST`       | –     | Test (AND)                  | `TST R1, R2`     | Sets flags for `R1 & R2`     |      |
+| `TEQ`       | –     | Test Equivalence (XOR)      | `TEQ R1, R2`     | Sets flags for `R1 ^ R2`     |      |
+| `AND`       | –     | Logical AND                 | `AND R1, R2, R3` | `R1 = R2 & R3`               |      |
+| `ORR`       | –     | Logical OR                  | `ORR R1, R2, R3` | \`R1 = R2                    | R3\` |
+| `EOR`       | –     | Exclusive OR                | `EOR R1, R2, R3` | `R1 = R2 ^ R3`               |      |
+| `BIC`       | –     | Bit Clear                   | `BIC R1, R2, R3` | `R1 = R2 & ~R3`              |      |
+
+---
+
+## 🔁 2. **Shift and Rotate Instructions**
+
+| Instruction | Alias | Full Name              | Example          | Description    |
+| ----------- | ----- | ---------------------- | ---------------- | -------------- |
+| `LSL`       | –     | Logical Shift Left     | `LSL R1, R2, #2` | `R1 = R2 << 2` |
+| `LSR`       | –     | Logical Shift Right    | `LSR R1, R2, #2` | `R1 = R2 >> 2` |
+| `ASR`       | –     | Arithmetic Shift Right | `ASR R1, R2, #2` | Signed shift   |
+| `ROR`       | –     | Rotate Right           | `ROR R1, R2, #1` | Rotate bits    |
+| `RRX`       | –     | Rotate Right Extended  | `RRX R1, R2`     | Includes carry |
+
+---
+
+## 📦 3. **Load/Store Instructions**
+
+| Instruction | Alias | Full Name      | Example            | Description           |
+| ----------- | ----- | -------------- | ------------------ | --------------------- |
+| `LDR`       | –     | Load Register  | `LDR R1, [R2]`     | Load word from memory |
+| `STR`       | –     | Store Register | `STR R1, [R2]`     | Store word to memory  |
+| `LDRB`      | –     | Load Byte      | `LDRB R1, [R2]`    | Load byte             |
+| `STRB`      | –     | Store Byte     | `STRB R1, [R2]`    | Store byte            |
+| `LDRH`      | –     | Load Halfword  | `LDRH R1, [R2]`    | Load 16-bit           |
+| `STRH`      | –     | Store Halfword | `STRH R1, [R2]`    | Store 16-bit          |
+| `LDM`       | –     | Load Multiple  | `LDM R0!, {R1-R3}` | Load multiple regs    |
+| `STM`       | –     | Store Multiple | `STM R0!, {R1-R3}` | Store multiple regs   |
+
+---
+
+## 🔀 4. **Branch Instructions**
+
+| Instruction | Alias | Full Name              | Example     | Description            |
+| ----------- | ----- | ---------------------- | ----------- | ---------------------- |
+| `B`         | –     | Branch                 | `B LOOP`    | Jump to label          |
+| `BL`        | –     | Branch with Link       | `BL FUNC`   | Call function          |
+| `BX`        | –     | Branch & Exchange      | `BX LR`     | Return from subroutine |
+| `BEQ`       | –     | Branch if Equal        | `BEQ label` | if Z = 1               |
+| `BNE`       | –     | Branch if Not Equal    | `BNE label` | if Z = 0               |
+| `BGT`       | –     | Branch if Greater Than | `BGT label` |                        |
+| `BLT`       | –     | Branch if Less Than    | `BLT label` |                        |
+| `BGE`       | –     | Branch if ≥            | `BGE label` |                        |
+| `BLE`       | –     | Branch if ≤            | `BLE label` |                        |
+| `BMI`       | –     | Branch if Minus        | `BMI label` | Negative               |
+| `BPL`       | –     | Branch if Plus         | `BPL label` | Positive               |
+
+---
+
+## 🔧 5. **Misc Instructions**
+
+| Instruction | Alias | Full Name          | Example    | Description     |
+| ----------- | ----- | ------------------ | ---------- | --------------- |
+| `NOP`       | –     | No Operation       | `NOP`      | Does nothing    |
+| `SWI`       | –     | Software Interrupt | `SWI 0x11` | Call OS         |
+| `BKPT`      | –     | Breakpoint         | `BKPT #0`  | Debugging break |
+| `SVC`       | –     | Supervisor Call    | `SVC #0`   | Like interrupt  |
+| `CPSID`     | –     | Disable Interrupts | `CPSID i`  | Disable IRQ     |
+| `CPSIE`     | –     | Enable Interrupts  | `CPSIE i`  | Enable IRQ      |
+
+---
+
+## 🔁 6. **Pseudoinstructions (Aliases)**
+
+These are **not real instructions**, but helpful aliases:
+
+| Pseudo             | Actual Instruction     | Example           |
+| ------------------ | ---------------------- | ----------------- |
+| `ADR`              | PC-relative `ADD`      | `ADR R0, label`   |
+| `LDR` (with value) | PC-relative `LDR`      | `LDR R0, =0x1000` |
+| `BNE`              | `B` with condition     | `BNE label`       |
+| `BLX`              | Branch & link/exchange | `BLX R3`          |
+
+---
+
+## 📌 Sample Code Using Various Instructions:
+
+```armasm
+AREA Demo, CODE, READONLY
+ENTRY
+    MOV R0, #10         ; Load 10 into R0
+    MOV R1, #20         ; Load 20 into R1
+    ADD R2, R0, R1      ; R2 = R0 + R1 (30)
+    CMP R2, #30         ; Compare R2 with 30
+    BEQ equal_label     ; If equal, branch
+    B end_label         ; Else, skip
+
+equal_label
+    MOV R3, #1          ; Set R3 = 1 if equal
+
+end_label
+    B end_label         ; Infinite loop to end
+END
+```
+
+---
+
+
 
