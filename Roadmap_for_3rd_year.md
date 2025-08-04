@@ -22,3 +22,7 @@ utilise as much as time as possible
   
 And Final aim:
           crack internship at the beginning of the fourth year. and ppo as well.
+
+
+Daily update:
+Its August 4th and i have solved 7 question.. todays target is to solve 2 more questions.
