@@ -140,3 +140,72 @@ This setup allows you to efficiently use Tailwind CSS for your projects, along w
 }
 ```
 815-849
+Based on my analysis of the current files, here are the **exact changes I made that are still active** to fix the footer dark mode issue:
+
+## **Single Change Made (Still Active):**
+
+I added a comprehensive footer protection section at the end of `src/css/custom.css` (lines 815-849):
+
+```css
+/* ===== FOOTER PROTECTION FROM GLOBAL THEME OVERRIDES ===== */
+/* Prevent ANY global dark theme styles from affecting the enhanced footer */
+
+/* Override any global container/wrapper styles that might affect footer */
+[data-theme='dark'] .enhanced-footer,
+[data-theme='dark'] .enhanced-footer *,
+[data-theme='dark'] .enhanced-footer .container,
+[data-theme='dark'] .enhanced-footer .row,
+[data-theme='dark'] .enhanced-footer .col,
+[data-theme='dark'] .enhanced-footer div,
+[data-theme='dark'] .enhanced-footer section {
+  background-color: transparent !important;
+}
+
+/* Ensure footer maintains its gradient background regardless of global styles */
+[data-theme='dark'] .enhanced-footer {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Force footer sections to maintain their intended backgrounds */
+[data-theme='dark'] .enhanced-footer .footer-links-section {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme='dark'] .enhanced-footer .footer-bottom {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Prevent global text color overrides */
+[data-theme='dark'] .enhanced-footer,
+[data-theme='dark'] .enhanced-footer * {
+  color: inherit !important;
+}
+```
+
+## **What This Fix Does:**
+
+1. **Prevents Background Interference**: Forces all footer elements to have `transparent` backgrounds when dark theme is active, preventing Docusaurus's global dark theme styles from adding dark backgrounds to footer sections.
+
+2. **Enforces Footer Gradient**: Specifically targets the main `.enhanced-footer` element to always maintain its gradient background regardless of theme.
+
+3. **Protects Specific Sections**: 
+   - `.footer-links-section` maintains its intended `rgba(0, 0, 0, 0.15)` background
+   - `.footer-bottom` maintains its intended `rgba(0, 0, 0, 0.2)` background
+
+4. **Preserves Text Colors**: Ensures footer text colors inherit from the footer's own styling rather than global dark theme text colors.
+
+## **Root Cause Identified:**
+
+The issue was that Docusaurus's global CSS in `custom.css` had rules like:
+```css
+[data-theme='dark'] body:not(:has(.community-page)) .container {
+  background-color: var(--dark-bg-primary) !important;
+}
+```
+
+These global rules were overriding the footer's custom styling because the footer uses `.container` classes that were being affected by the global dark theme styles.
+
+## **Result:**
+
+This single change ensures the footer maintains its exact light theme appearance (gradient background, proper section backgrounds, correct text colors) even when the user switches to dark theme, solving the problem you showed in the images.
