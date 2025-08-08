@@ -1,7 +1,7 @@
 
 # Setting Up Tailwind CSS in a Project 
 
-## Prerequisites
+## Prerequisites 
 
 - **VS Code**: Install the [Tailwind CSS IntelliSense extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) to enhance the development experience with Tailwind.
 - **Node.js**: Install Node.js from [here](https://nodejs.org/), if not already installed.
