@@ -103,3 +103,40 @@ project-folder/
 
 This setup allows you to efficiently use Tailwind CSS for your projects, along with live rebuilding using the `--watch` mode for faster development.
 
+```css
+/* ===== FOOTER PROTECTION FROM GLOBAL THEME OVERRIDES ===== */
+/* Prevent ANY global dark theme styles from affecting the enhanced footer */
+
+/* Override any global container/wrapper styles that might affect footer */
+[data-theme='dark'] .enhanced-footer,
+[data-theme='dark'] .enhanced-footer *,
+[data-theme='dark'] .enhanced-footer .container,
+[data-theme='dark'] .enhanced-footer .row,
+[data-theme='dark'] .enhanced-footer .col,
+[data-theme='dark'] .enhanced-footer div,
+[data-theme='dark'] .enhanced-footer section {
+  background-color: transparent !important;
+}
+
+/* Ensure footer maintains its gradient background regardless of global styles */
+[data-theme='dark'] .enhanced-footer {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Force footer sections to maintain their intended backgrounds */
+[data-theme='dark'] .enhanced-footer .footer-links-section {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme='dark'] .enhanced-footer .footer-bottom {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Prevent global text color overrides */
+[data-theme='dark'] .enhanced-footer,
+[data-theme='dark'] .enhanced-footer * {
+  color: inherit !important;
+}
+```
+815-849
