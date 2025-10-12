@@ -9,7 +9,7 @@ public class Main {
     System.setProperty("webdriver.chrome.driver","D:\\chrome-selenium-driver\\chromedriver.exe");
    //to open chrome browser
     WebDriver driver= new ChromeDriver();
-    //link to the website to be opened
+    //link to the website to be opened ----launch application
     driver.get("https://www.gmail.com");
     //test the website
     String et=driver.getTitle();
