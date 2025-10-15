@@ -28,7 +28,7 @@ public class Main {
 }
 
 ```
-```
+```java
 package org.example;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
@@ -81,3 +81,50 @@ public class Main {
 }
 
 ```
+
+## WebDriver Methods
+```
+String var=driver.getCurrentUrl();
+System.out.println(var);
+
+String title=driver.getTitle();
+System.out.println(title);
+
+element.getText() -> to fetch inner text of element
+WebElement element= driver.findElement(By.xpath("anylink"));
+String linkText=element.getText();
+
+
+element.getTagName();
+WebElement element=driver.findElement(By.id("submit"));
+String TagName=element.getTagName();
+
+To get css property value
+WebElement contin=driver.findElement(By.className("a-button-text"));
+String css=contin.getCssValue("color");
+String attribute=contin.getAttribute("class"); //get attribute
+contin.click();
+
+System.out.println(attribute);
+System.out.println(css);
+
+element.submit() // to submit form
+
+String variable = driver.getPageSource()
+driver.quit() //closes all the browsers --everywindow
+driver.close()  //closes avtiver browser
+
+
+//no attributes for navigation so we have methods
+
+        driver.navigate().to("https://www.flipkart.com/");
+        Thread.sleep(3000);
+        driver.navigate().back(); //goes back to amazon
+        Thread.sleep(3000);
+        //moves single time forward in the browser
+        driver.navigate().forward(); //goes back to flipkart
+        //refresh the current webpage
+        driver.navigate().refresh();
+<img width="162" height="72" alt="image" src="https://github.com/user-attachments/assets/dcced74c-970a-47b8-97f5-d81aa1a426bb" />
+
+
