@@ -440,7 +440,27 @@ Duplicate `Riya` is retained.
 | Memory usage         | Higher           | Lower        |
 
 ---
+# SQL Subqueries in the `FROM` Clause (Derived Tables)
 
+A **subquery** is a query written inside another query.
+
+When a subquery is placed inside the `FROM` clause, SQL treats its result as a **temporary table** (also called a **derived table**).
+
+---
+
+# Syntax
+
+```sql
+SELECT column_name(s)
+FROM (
+    SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name
+) AS subquery_alias;
+```
+
+> **Important:** Most SQL databases require an alias (`AS subquery_alias`) for the subquery.
 # User-Defined Variables in MySQL
 
 A user-defined variable stores a value temporarily during a session.
