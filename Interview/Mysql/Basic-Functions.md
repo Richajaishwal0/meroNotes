@@ -208,7 +208,72 @@ CASE
 END
 FROM Employee;
 ```
+# Other uses
 
+```sql
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ...
+    ELSE default_result
+END AS column_name
+```
+
+# Example 1: Convert Gender Codes
+
+```sql
+SELECT
+    first_name,
+    last_name,
+    CASE
+        WHEN gender = 'M' THEN 'MALE'
+        ELSE 'FEMALE'
+    END AS gender
+FROM patients;
+```
+
+### Output
+
+| first_name | last_name | gender |
+|------------|-----------|--------|
+| John | Smith | MALE |
+| Emma | Brown | FEMALE |
+
+---
+
+# Example 2: Classify Patients by Age
+
+```sql
+SELECT
+    first_name,
+    age,
+    CASE
+        WHEN age < 18 THEN 'Child'
+        WHEN age >= 18 AND age < 60 THEN 'Adult'
+        ELSE 'Senior'
+    END AS age_group
+FROM patients;
+```
+
+### Output
+
+| first_name | age | age_group |
+|------------|-----|-----------|
+| Alice | 12 | Child |
+| Bob | 35 | Adult |
+| Mary | 67 | Senior |
+
+---
+
+---
+
+## Key Points
+
+- `CASE` is evaluated from top to bottom.
+- The first matching `WHEN` condition is returned.
+- `ELSE` is optional. If omitted and no condition matches, the result is `NULL`.
+- Always end the statement with `END`.
+- Use `AS` to give the computed column a meaningful name.
 ---
 
 # 8. Functions Used with GROUP BY
