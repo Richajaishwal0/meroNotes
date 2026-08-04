@@ -531,3 +531,7 @@ LIMIT 50;
 ```
 
 returns the first 50 records.
+
+
+<img width="644" height="611" alt="image" src="https://github.com/user-attachments/assets/8ef3a51f-c8bd-4db3-b65b-8686b50a33fc" />
+
