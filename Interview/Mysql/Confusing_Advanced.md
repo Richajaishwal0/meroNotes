@@ -1,5 +1,3 @@
-Absolutely. I'll make it like **your personal SQL revision notes**—simple, pattern-based, with examples rather than textbook definitions.
-
 # SQL — GROUP BY vs PARTITION BY vs CTE
 
 ## 1. GROUP BY
@@ -619,3 +617,363 @@ CTE         → BREAKS query into steps
 ```
 
 That is the core idea.
+
+# SQL Window Functions: SUM / AVG with ORDER BY
+
+## 1. The main idea
+
+When you write:
+
+```sql
+SUM(weight) OVER (ORDER BY turn)
+```
+
+SQL calculates a **cumulative (running) sum**.
+
+Think:
+
+> "For this row, add everything from the beginning up to this row."
+
+---
+
+## 2. SUM() OVER (ORDER BY ...)
+
+Example table:
+
+| turn | person | weight |
+|---:|---|---:|
+| 1 | A | 200 |
+| 2 | B | 300 |
+| 3 | C | 400 |
+| 4 | D | 200 |
+
+Query:
+
+```sql
+SELECT
+    turn,
+    person,
+    weight,
+    SUM(weight) OVER (ORDER BY turn) AS cumulative_weight
+FROM Queue;
+```
+
+Result:
+
+| turn | person | weight | cumulative_weight |
+|---:|---|---:|---:|
+| 1 | A | 200 | 200 |
+| 2 | B | 300 | 500 |
+| 3 | C | 400 | 900 |
+| 4 | D | 200 | 1100 |
+
+### How SQL calculates it
+
+```text
+Turn 1:
+200
+= 200
+
+Turn 2:
+200 + 300
+= 500
+
+Turn 3:
+200 + 300 + 400
+= 900
+
+Turn 4:
+200 + 300 + 400 + 200
+= 1100
+```
+
+So:
+
+```sql
+SUM(x) OVER (ORDER BY something)
+```
+
+means:
+
+**Running / cumulative SUM in that order.**
+
+---
+
+# 3. AVG() OVER (ORDER BY ...)
+
+The same idea works with `AVG`.
+
+```sql
+AVG(weight) OVER (ORDER BY turn)
+```
+
+This gives a **running average**.
+
+For the same data:
+
+| turn | weight | cumulative average |
+|---:|---:|---:|
+| 1 | 200 | 200 |
+| 2 | 300 | 250 |
+| 3 | 400 | 300 |
+| 4 | 200 | 275 |
+
+Calculation:
+
+```text
+Turn 1:
+200 / 1 = 200
+
+Turn 2:
+(200 + 300) / 2 = 250
+
+Turn 3:
+(200 + 300 + 400) / 3 = 300
+
+Turn 4:
+(200 + 300 + 400 + 200) / 4 = 275
+```
+
+So:
+
+```sql
+AVG(x) OVER (ORDER BY something)
+```
+
+means:
+
+**Running / cumulative AVG in that order.**
+
+---
+
+# 4. What does ORDER BY do here?
+
+This is extremely important.
+
+```sql
+SUM(weight) OVER (ORDER BY turn)
+```
+
+The `ORDER BY turn` tells SQL:
+
+> "Start from the smallest turn and keep adding as turn increases."
+
+Without `ORDER BY`:
+
+```sql
+SUM(weight) OVER ()
+```
+
+you get the **total sum of the entire table on every row**.
+
+Example:
+
+| turn | weight | SUM(weight) OVER () |
+|---:|---:|---:|
+| 1 | 200 | 1100 |
+| 2 | 300 | 1100 |
+| 3 | 400 | 1100 |
+| 4 | 200 | 1100 |
+
+Compare:
+
+```sql
+SUM(weight) OVER ()
+```
+
+→ Total for everyone.
+
+```sql
+SUM(weight) OVER (ORDER BY turn)
+```
+
+→ Running total.
+
+---
+
+# 5. What if we use PARTITION BY?
+
+Now suppose we have:
+
+| employee | department | salary |
+|---|---|---:|
+| A | IT | 100 |
+| B | IT | 200 |
+| C | HR | 300 |
+| D | HR | 500 |
+
+Query:
+
+```sql
+SUM(salary) OVER (
+    PARTITION BY department
+)
+```
+
+SQL creates separate groups internally:
+
+```text
+IT → 100, 200
+HR → 300, 500
+```
+
+Result:
+
+| employee | department | salary | department_sum |
+|---|---|---:|---:|
+| A | IT | 100 | 300 |
+| B | IT | 200 | 300 |
+| C | HR | 300 | 800 |
+| D | HR | 500 | 800 |
+
+`PARTITION BY` means:
+
+> Calculate separately for each group, but keep every row.
+
+---
+
+# 6. PARTITION BY + ORDER BY
+
+This is where things become very useful.
+
+```sql
+SUM(salary) OVER (
+    PARTITION BY department
+    ORDER BY employee
+)
+```
+
+Now we get a **cumulative sum separately inside each department**.
+
+Result:
+
+| employee | department | salary | cumulative_sum |
+|---|---|---:|---:|
+| A | IT | 100 | 100 |
+| B | IT | 200 | 300 |
+| C | HR | 300 | 300 |
+| D | HR | 500 | 800 |
+
+Notice:
+
+```text
+IT:
+100
+100 + 200 = 300
+
+HR:
+300
+300 + 500 = 800
+```
+
+The cumulative calculation **resets when the partition changes**.
+
+---
+
+# 7. The easiest way to remember
+
+## SUM
+
+```sql
+SUM(x) OVER (ORDER BY id)
+```
+
+→ Running total.
+
+```text
+10
+10 + 20 = 30
+10 + 20 + 30 = 60
+...
+```
+
+## AVG
+
+```sql
+AVG(x) OVER (ORDER BY id)
+```
+
+→ Running average.
+
+```text
+10
+(10 + 20) / 2
+(10 + 20 + 30) / 3
+...
+```
+
+## No ORDER BY
+
+```sql
+SUM(x) OVER ()
+```
+
+→ Total of all rows, repeated on every row.
+
+## PARTITION BY
+
+```sql
+SUM(x) OVER (PARTITION BY group_col)
+```
+
+→ Total separately for each group.
+
+## PARTITION BY + ORDER BY
+
+```sql
+SUM(x) OVER (
+    PARTITION BY group_col
+    ORDER BY id
+)
+```
+
+→ Running total separately for each group.
+
+---
+
+# 8. Connection to LeetCode 1204
+
+For **Last Person to Fit in the Bus**, you need:
+
+```sql
+SUM(weight) OVER (ORDER BY turn)
+```
+
+because you need to know:
+
+> "After this person boards, what is the total weight of everyone who has boarded so far?"
+
+Then:
+
+```text
+cumulative weight <= 1000
+```
+
+means that person can still board.
+
+The person with the **largest turn** among those rows is the answer.
+
+---
+
+# Quick Revision
+
+| Query | Meaning |
+|---|---|
+| `SUM(x)` | One total when used as a normal aggregate |
+| `SUM(x) OVER ()` | Total repeated on every row |
+| `SUM(x) OVER (ORDER BY id)` | Running/cumulative total |
+| `SUM(x) OVER (PARTITION BY dept)` | Total per department, repeated on each row |
+| `SUM(x) OVER (PARTITION BY dept ORDER BY id)` | Running total within each department |
+| `AVG(x) OVER ()` | Overall average repeated on every row |
+| `AVG(x) OVER (ORDER BY id)` | Running average |
+| `AVG(x) OVER (PARTITION BY dept)` | Average per department |
+| `AVG(x) OVER (PARTITION BY dept ORDER BY id)` | Running average within each department |
+
+## One-line memory trick
+
+```text
+PARTITION BY → where to reset
+ORDER BY     → where to start and what order to accumulate
+SUM          → running total
+AVG          → running average
+```
