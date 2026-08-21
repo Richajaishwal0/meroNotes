@@ -1,508 +1,1570 @@
-# QSecureTwin — Final Project View
+# Quantum-Safe Migration Platform — Module Guide
 
-## 1. The Main Aim of Our Project
+## 1. Project Goal
 
-The aim of **QSecureTwin** is to build a system that helps enterprises prepare for **Post-Quantum Cryptography (PQC) migration**.
+The goal of this project is to build a platform that helps organizations move from vulnerable or quantum-insecure cryptographic systems toward **post-quantum cryptography (PQC)**.
 
-The project will ultimately answer:
+The platform should not stop at saying:
 
-1. **How vulnerable is each cryptographic asset to quantum threats?**
-2. **Which PQC algorithm should be recommended?**
-3. **How urgent is the migration?**
-4. **What migration-related risks or outcomes can be expected?**
-5. **After understanding all assets, how should the enterprise plan its migration?**
+> "Your organization has high quantum risk."
 
----
-
-# 2. The Project Has Two Major Phases
-
-## PHASE 1 / THIS SEMESTER
-
-### Goal:
-
-> **Build the complete ML prediction engine using the existing dataset.**
-
-In this phase, we will work with the given dataset and train models for **all available target outputs**.
-
-### Flow
+It should help answer the complete journey:
 
 ```text
-EXISTING DATASET
-       ↓
-Understand the Data
-       ↓
-EDA
-       ↓
-Data Preprocessing
-       ↓
-Feature Engineering
-       ↓
-Train ML Models
-       ↓
-Evaluate and Compare Models
-       ↓
-Select Best Models
-       ↓
-Save Complete ML Pipeline
-```
-
----
-
-## What will the ML models predict?
-
-Using the input features available in the dataset, we will train models to predict:
-
-### A. Quantum Risk and PQC Decision
-
-1. **Quantum Risk Score**
-2. **Risk Category**
-3. **Recommended PQC Algorithm**
-4. **Migration Priority**
-5. **Recommended Migration Stage**
-
-### B. Migration Outcome and Risk Prediction
-
-6. **Migration Success**
-7. **Rollback Required**
-8. **Downtime Risk**
-9. **Compatibility Risk**
-10. **Estimated Migration Duration**
-
-So, by the end of this semester, our ML system should conceptually work like this:
-
-```text
-ASSET INFORMATION
-       ↓
-PREPROCESSING
-       ↓
-TRAINED ML MODELS
-       ↓
-┌───────────────────────────────────┐
-│ Quantum Risk Score                │
-│ Risk Category                     │
-│ Recommended PQC Algorithm         │
-│ Migration Priority                │
-│ Migration Stage                   │
-│ Migration Success                 │
-│ Rollback Required                 │
-│ Downtime Risk                     │
-│ Compatibility Risk                │
-│ Migration Duration                │
-└───────────────────────────────────┘
-```
-
-### Final outcome of Phase 1
-
-> **A complete trained and evaluated ML prediction engine for all target outputs available in the dataset.**
-
----
-
-# PHASE 2 / NEXT SEMESTER
-
-### Goal:
-
-> **Take the ML models built in Phase 1 and turn them into a practical enterprise PQC migration decision-support system.**
-
-This is where the project goes **beyond simply predicting dataset outputs**.
-
----
-
-# 3. What Will We Do in Phase 2?
-
-## Step 1 — Take new/real-world enterprise data
-
-Instead of only using the existing dataset:
-
-```text
-Dataset → ML Training
-```
-
-we will allow:
-
-```text
-Enterprise / User Data
+What cryptography do we have?
         ↓
-QSecureTwin System
+Which assets are vulnerable?
+        ↓
+How serious is the quantum risk?
+        ↓
+Which assets should we migrate first?
+        ↓
+What PQC strategy should we consider?
+        ↓
+How difficult or expensive could migration be?
+        ↓
+What steps should we follow?
+        ↓
+How do we track migration progress?
 ```
 
-For example, an enterprise may provide information about many cryptographic assets.
+The project can therefore be viewed as a **Quantum-Safe Migration Decision Support Platform**.
 
 ---
 
-## Step 2 — Use the ML models built in Phase 1
+# 2. Overall System Flow
 
 ```text
-NEW ENTERPRISE DATA
-        ↓
-Data Validation
-        ↓
-Same Preprocessing Pipeline
-        ↓
-Saved ML Models
-        ↓
-Predictions for Every Asset
+                    QUANTUM-SAFE MIGRATION PLATFORM
+
+                              ┌───────────────┐
+                              │ User / Admin  │
+                              └───────┬───────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 1. Asset Discovery &   │
+                         │    Automated Ingestion  │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 2. Cryptographic       │
+                         │    Inventory            │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 3. Quantum Risk        │
+                         │    Assessment            │
+                         │       [ML Models]       │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 4. Migration Priority  │
+                         │    Engine               │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 5. PQC Recommendation  │
+                         │    & Strategy Engine    │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 6. Cost & Performance  │
+                         │    Impact Analyzer      │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 7. Migration Roadmap   │
+                         │    Generator             │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 8. Migration Task &    │
+                         │    Progress Tracker    │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 9. Crypto-Agility      │
+                         │    Analyzer              │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 10. Quantum Readiness  │
+                         │     & Compliance View  │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 11. Quantum Security   │
+                         │     Assistant           │
+                         └────────────┬───────────┘
+                                      ↓
+                         ┌────────────────────────┐
+                         │ 12. Reports & Executive│
+                         │     Dashboard           │
+                         └────────────────────────┘
 ```
 
-So if an enterprise provides 100 assets:
+Not every module has to be built at once. The modules should be implemented in stages.
+
+---
+
+# 3. Module 1 — Asset Discovery & Automated Ingestion
+
+## What is the purpose?
+
+Before an organization can migrate its cryptography, it first needs to know:
+
+> **Where is cryptography being used?**
+
+A real organization may have:
+
+- TLS certificates
+- Web servers
+- APIs
+- Databases
+- VPN systems
+- Applications
+- Digital signatures
+- Key-exchange mechanisms
+- Configuration files
+- Cloud services
+
+Manually entering every asset is not practical.
+
+Therefore, this module allows users to **upload or provide cryptographic information automatically**.
+
+---
+
+## What can the user provide?
+
+Start with a small number of practical inputs:
 
 ```text
-Asset 1 → All 10 predictions
-Asset 2 → All 10 predictions
-Asset 3 → All 10 predictions
-...
-Asset 100 → All 10 predictions
+1. Manual asset entry
+2. CSV upload
+3. Certificate upload (.crt / .pem)
+4. Later: selected configuration files
+```
+
+Do not try to support every possible enterprise system initially.
+
+---
+
+## Example
+
+Suppose a company uploads:
+
+```text
+website_certificate.pem
+```
+
+The platform reads the certificate and extracts information such as:
+
+```text
+Subject: example.com
+Issuer: Example CA
+Public Key Algorithm: RSA
+Key Size: 2048
+Signature Algorithm: SHA256-RSA
+Expiry Date: 2027-05-10
+```
+
+The system then converts this information into its internal asset format:
+
+```json
+{
+  "asset_name": "example.com",
+  "asset_type": "TLS Certificate",
+  "algorithm": "RSA",
+  "key_size": 2048,
+  "signature_algorithm": "SHA256-RSA"
+}
+```
+
+This information can then be sent to the risk assessment system.
+
+---
+
+## How will it be implemented?
+
+Possible backend:
+
+```text
+FastAPI
+```
+
+Useful Python libraries:
+
+```text
+cryptography
+pandas
+```
+
+Flow:
+
+```text
+User uploads certificate
+        ↓
+FastAPI upload endpoint
+        ↓
+Certificate parser
+        ↓
+Extract cryptographic information
+        ↓
+Convert to common asset format
+        ↓
+Store in database
+        ↓
+Send to assessment pipeline
 ```
 
 ---
 
-# 4. What Happens Beyond Prediction?
+## Important design decision
 
-This is where the project becomes more useful.
-
-After predicting the outputs for all assets, we will use the predictions to build **enterprise-level insights and planning features**.
-
-## 1. Enterprise Risk Overview
-
-Instead of looking at assets one by one, the system will analyze the entire organization.
+Every input method should eventually produce the **same internal asset structure**.
 
 For example:
 
 ```text
-Total Assets: 500
-
-Critical Risk: 45
-High Risk: 120
-Medium Risk: 200
-Low Risk: 135
+CSV
+Manual Entry
+Certificate
+Configuration File
+       ↓
+Common Asset Object
+       ↓
+Database
+       ↓
+All other modules
 ```
 
-The system can generate:
-
-* Overall enterprise risk level
-* Number of assets in each risk category
-* High-risk areas
-* Assets requiring immediate attention
+This makes the rest of the system much easier to develop.
 
 ---
 
-## 2. Asset Prioritization
+# 4. Module 2 — Cryptographic Inventory
 
-We will use predictions such as:
+## What is the purpose?
 
-* Quantum Risk Score
-* Risk Category
-* Migration Priority
-* Migration Stage
-* Downtime Risk
-* Compatibility Risk
-* Estimated Duration
+After discovering assets, the platform needs a central place to keep track of them.
 
-to identify which assets should receive attention first.
+This is the **Cryptographic Inventory**.
+
+Think of it as:
+
+> **A database of all cryptographic assets used by the organization.**
+
+---
+
+## Example inventory
+
+| Asset | Type | Algorithm | Key Size | Risk |
+|---|---|---|---:|---|
+| Website | TLS | RSA | 2048 | High |
+| Customer DB | Encryption | AES | 256 | Medium |
+| VPN | Key Exchange | ECC | 256 | Critical |
+| Internal App | Certificate | RSA | 4096 | Medium |
+
+The user should be able to search and filter this inventory.
 
 For example:
 
 ```text
-Priority Order
-
-1. Asset A
-2. Asset F
-3. Asset C
-4. Asset B
-5. Asset D
+Show all RSA assets
 ```
 
-This priority order is an **additional result created by our system**.
+or:
+
+```text
+Show all Critical assets
+```
+
+or:
+
+```text
+Show all certificates expiring soon
+```
 
 ---
 
-## 3. Migration Roadmap Generation
+## Why is this important?
 
-Instead of showing only:
+Without an inventory, the organization does not know:
+
+- How many cryptographic assets it has
+- Which algorithms are being used
+- Where RSA/ECC are being used
+- Which systems are vulnerable
+- Which systems need migration
+
+So this module answers:
+
+> **"What cryptography do we currently have?"**
+
+---
+
+# 5. Module 3 — Quantum Risk Assessment
+
+## What is the purpose?
+
+This is the main **Phase 1 ML component** of the project.
+
+The system takes information about an asset and predicts its quantum security risk.
+
+For example:
 
 ```text
-Asset A → Critical
+Asset:
+Customer Database
+
+Current Algorithm:
+RSA-2048
+
+Data Sensitivity:
+High
+
+System Criticality:
+High
 ```
 
-the system will organize assets into a usable roadmap.
+The model produces:
+
+```text
+Quantum Risk Score: 85 / 100
+
+Risk Category: Critical
+```
+
+---
+
+## Your Phase 1
+
+Your current project already focuses on predictions such as:
+
+```text
+Quantum Risk Score
+Risk Category
+PQC Recommendation
+```
+
+However, these outputs should be logically connected.
+
+A cleaner design is:
+
+```text
+Input Features
+      ↓
+Risk Score Model
+      ↓
+Risk Score
+      ↓
+Risk Category
+```
+
+For example:
+
+```text
+0–30   → Low
+31–60  → Medium
+61–80  → High
+81–100 → Critical
+```
+
+The exact thresholds should be chosen based on your dataset and project methodology.
+
+---
+
+## PQC recommendation
+
+The PQC recommendation does not necessarily need to be another completely independent ML model.
+
+A better architecture can be:
+
+```text
+Risk Prediction
++
+Asset Type
++
+Current Algorithm
++
+Security Requirements
++
+Performance Requirements
+        ↓
+PQC Recommendation Engine
+```
+
+This makes the recommendation explainable.
+
+---
+
+## Example
+
+```text
+Asset Type:
+Key Exchange
+
+Current Algorithm:
+ECC
+
+Risk:
+Critical
+
+Recommendation:
+Consider ML-KEM-based migration/hybrid strategy
+
+Reason:
+The asset performs key establishment and has high quantum
+exposure.
+```
+
+The exact recommendation should follow the cryptographic standards and compatibility assumptions used by your project.
+
+---
+
+# 6. Module 4 — Migration Priority Engine
+
+## What is the purpose?
+
+Risk alone does not tell an organization:
+
+> **Which system should I migrate first?**
+
+Consider two assets:
+
+### Asset A
+
+```text
+Quantum Risk = 95
+Business Criticality = Low
+```
+
+### Asset B
+
+```text
+Quantum Risk = 80
+Business Criticality = Very High
+Sensitive Data = Very High
+```
+
+The organization may want to migrate Asset B first.
+
+Therefore, we need a **Migration Priority Score**.
+
+---
+
+## Possible factors
+
+The priority can consider:
+
+```text
+Quantum Risk
++
+Business Criticality
++
+Data Sensitivity
++
+Migration Difficulty
++
+Exposure
+```
+
+For example:
+
+```text
+Priority Score =
+0.40 × Quantum Risk
++
+0.30 × Business Criticality
++
+0.20 × Data Sensitivity
++
+0.10 × Exposure
+```
+
+The weights are only an example and should be validated for the project.
+
+---
+
+## Example
+
+| Asset | Risk | Criticality | Sensitivity | Priority |
+|---|---:|---:|---:|---:|
+| Payment API | 85 | 100 | 95 | 92 |
+| Internal HR Tool | 95 | 30 | 20 | 61 |
+
+The platform can therefore say:
+
+```text
+Priority 1 → Payment API
+Priority 2 → Customer Database
+Priority 3 → VPN
+Priority 4 → Internal HR Tool
+```
+
+---
+
+## Implementation
+
+This does not need another ML model.
+
+Start with:
+
+```text
+Python
++
+Weighted scoring
++
+Business rules
+```
+
+Later, if you obtain enough real-world data, this could be improved.
+
+---
+
+# 7. Module 5 — PQC Recommendation & Migration Strategy Engine
+
+## What is the purpose?
+
+The risk module tells the organization:
+
+> "This asset has a high quantum risk."
+
+But the user then asks:
+
+> **"What should I do about it?"**
+
+This module provides the recommended cryptographic migration strategy.
+
+---
+
+## Example
+
+Input:
+
+```text
+Asset:
+TLS Server
+
+Current Algorithm:
+RSA-2048
+
+Risk:
+Critical
+
+Performance Sensitivity:
+High
+```
+
+Output:
+
+```text
+Recommended Strategy:
+Evaluate a PQC/hybrid migration approach.
+
+Recommended PQC family:
+ML-KEM for key establishment
+
+Priority:
+High
+
+Reason:
+The system uses quantum-vulnerable public-key cryptography
+for key establishment and is highly exposed.
+```
+
+For a digital-signature use case, the recommendation could instead involve an appropriate PQC signature algorithm such as ML-DSA.
+
+---
+
+## Why use rules here?
+
+Do not force every part of the system to use ML.
+
+A practical architecture is:
+
+```text
+ML
+↓
+Predict risk
+
+Rule / Decision Engine
+↓
+Determine appropriate migration strategy
+```
+
+This is:
+
+- Easier to explain
+- Easier to test
+- More transparent
+- Easier to modify when standards change
+
+---
+
+# 8. Module 6 — Cost & Performance Impact Analyzer
+
+## What is the purpose?
+
+Organizations do not only ask:
+
+> "Is migration necessary?"
+
+They also ask:
+
+> "How much effort will migration require?"
+
+and:
+
+> "Will the new cryptography affect performance?"
+
+This module gives **estimates**, not guaranteed real-world values.
+
+---
+
+## Example
+
+Current system:
+
+```text
+Algorithm: RSA
+Estimated latency: 20 ms
+```
+
+Proposed migration:
+
+```text
+Strategy: PQC / Hybrid
+Estimated latency impact: +X%
+Estimated compute impact: +Y%
+Migration effort: Medium
+```
+
+The values can initially be based on assumptions or benchmark data.
+
+---
+
+## Cost estimation
+
+A simple model can be:
+
+```text
+Estimated Migration Cost =
+Engineer Hours × Hourly Cost
++
+Infrastructure Cost
++
+Testing Cost
+```
 
 Example:
 
 ```text
-PHASE 1
---------
-Assets requiring immediate attention
+Engineer Hours = 200
 
-PHASE 2
---------
-High-priority assets
+Hourly Cost = ₹2,000
 
-PHASE 3
---------
-Medium-priority assets
-
-PHASE 4
---------
-Remaining assets
+Engineering Cost =
+200 × ₹2,000
+=
+₹4,00,000
 ```
 
-The exact logic for grouping can be developed and improved in Phase 2.
+The platform should clearly label this as an **estimate**.
 
 ---
 
-## 4. Risk-Aware Migration Planning
+## Why is this useful?
 
-The system can consider multiple predictions together.
+The security team can explain migration to management:
+
+```text
+"These 12 critical systems need migration."
+
+"Estimated effort is approximately X engineer-hours."
+
+"The highest-priority systems are these five."
+```
+
+This turns technical analysis into a business decision.
+
+---
+
+# 9. Module 7 — Migration Roadmap Generator
+
+## What is the purpose?
+
+After the platform identifies what needs to be migrated, it should answer:
+
+> **"What should we do next?"**
+
+The Migration Roadmap Generator converts analysis into a sequence of migration phases.
+
+---
+
+## Example roadmap
+
+### Phase 1 — Discovery
+
+```text
+1. Complete cryptographic inventory
+2. Identify critical assets
+3. Identify legacy algorithms
+4. Classify sensitive systems
+```
+
+### Phase 2 — Preparation
+
+```text
+1. Select pilot application
+2. Prepare test environment
+3. Review compatibility
+4. Establish rollback plan
+```
+
+### Phase 3 — Pilot
+
+```text
+1. Implement proposed PQC/hybrid configuration
+2. Run compatibility tests
+3. Measure performance
+4. Perform security validation
+```
+
+### Phase 4 — High-Priority Migration
+
+```text
+1. Migrate critical systems
+2. Validate applications
+3. Monitor performance
+4. Document changes
+```
+
+### Phase 5 — Organization-Wide Migration
+
+```text
+1. Migrate remaining systems
+2. Retire deprecated configurations
+3. Verify migration
+4. Update inventory
+```
+
+---
+
+## How to implement?
+
+Start with a **rule/template-based generator**.
 
 For example:
 
-```text
-Asset A
---------
-Quantum Risk: Critical
-Priority: Immediate
-Downtime Risk: High
-Compatibility Risk: Medium
-Duration: 15 days
+```python
+if risk == "Critical":
+    add_task("Immediate migration planning")
+
+if asset_type == "TLS":
+    add_task("Evaluate TLS PQC/hybrid compatibility")
+
+if priority_score > 80:
+    add_task("Place asset in high-priority migration phase")
 ```
 
-This means the system should not just say:
+Later, an LLM can help turn the structured plan into a more readable explanation.
 
-> "Migrate immediately."
+Important:
 
-It can also provide a more meaningful interpretation:
+```text
+Rules decide the security action.
+LLM explains the action.
+```
 
-> **High quantum risk and immediate priority, but migration should be carefully planned because of high downtime risk and long estimated duration.**
-
-This type of **combined decision insight** makes the output more useful than displaying 10 independent predictions.
+Do not let an LLM independently invent cryptographic migration decisions.
 
 ---
 
-# 5. Additional Features That Can Make the Project Stand Out
+# 10. Module 8 — Migration Task & Progress Tracker
 
-These can be developed in Phase 2.
+## What is the purpose?
 
-## A. Interactive Dashboard
+A roadmap is useful, but organizations also need to know:
+
+> **"Have we actually completed the migration?"**
+
+This module converts roadmap recommendations into tasks.
+
+---
+
+## Example
+
+```text
+PAYMENT API MIGRATION
+
+[Completed] Asset discovery
+[Completed] Risk assessment
+[Completed] PQC strategy selected
+[In Progress] Test environment
+[Pending] Compatibility testing
+[Pending] Pilot deployment
+[Pending] Production migration
+[Pending] Security verification
+```
+
+Each task can have:
+
+```text
+Task
+Priority
+Status
+Assigned Person
+Due Date
+Notes
+```
+
+---
+
+## Example dashboard
+
+```text
+Migration Progress
+
+Completed:    35%
+In Progress:  25%
+Pending:      40%
+```
+
+This changes your system from a:
+
+> **Prediction Dashboard**
+
+into a:
+
+> **Migration Management Platform**
+
+---
+
+# 11. Module 9 — Crypto-Agility Analyzer
+
+## What is crypto-agility?
+
+Crypto-agility means that an application can **change its cryptographic mechanisms without requiring a complete rewrite of the system**.
+
+This becomes important because cryptographic standards can evolve.
+
+---
+
+## Example problem
+
+Suppose an application contains:
+
+```python
+algorithm = "RSA"
+```
+
+in many different source files.
+
+Changing RSA later could require modifying many files.
+
+This indicates poor crypto-agility.
+
+---
+
+## What your platform can do
+
+Allow the user to upload selected:
+
+```text
+Configuration files
+JSON
+YAML
+Selected source files
+```
+
+The system scans for:
+
+```text
+RSA
+ECC
+SHA-1
+MD5
+Hardcoded cryptographic settings
+Repeated algorithm configuration
+```
+
+Then produce:
+
+```text
+Crypto-Agility Score: 45 / 100
+```
+
+Example findings:
+
+```text
+WARNING:
+RSA configuration hardcoded in 5 files.
+
+WARNING:
+Legacy SHA-1 usage detected.
+
+GOOD:
+Some cryptographic configuration is externalized.
+```
+
+---
+
+## Implementation
+
+Start simple:
+
+```text
+Regex
++
+Pattern Matching
++
+Rule-Based Scoring
+```
+
+Example:
+
+```python
+patterns = {
+    "RSA": r"RSA",
+    "SHA1": r"SHA-?1",
+    "MD5": r"MD5"
+}
+```
+
+Do not try to build a complete enterprise static-analysis tool.
+
+A basic prototype is enough.
+
+Later, this can be extended using AST-based analysis for supported programming languages.
+
+---
+
+# 12. Module 10 — Quantum Readiness & Compliance View
+
+## What is the purpose?
+
+Risk tells you:
+
+> "How exposed are you?"
+
+Readiness tells you:
+
+> **"How prepared are you for migration?"**
+
+These are different concepts.
+
+---
+
+## Example
+
+```text
+Quantum Readiness Score: 72 / 100
+```
+
+Possible components:
+
+```text
+Crypto Inventory             15 points
+Risk Assessment              15 points
+Critical Asset Identification 15 points
+Migration Plan                15 points
+Pilot Testing                 20 points
+Migration Progress            20 points
+```
+
+Total:
+
+```text
+100 points
+```
+
+The exact scoring model should be defined by your project.
+
+---
+
+## Dashboard
+
+```text
+QUANTUM READINESS
+
+72 / 100
+MODERATE
+
+✓ Inventory completed
+✓ Risk assessment completed
+✓ Critical assets identified
+✓ Migration roadmap created
+⚠ Pilot migration not completed
+⚠ Legacy cryptography remains
+```
+
+---
+
+## Compliance wording
+
+Be careful about saying:
+
+> "Your organization is NIST compliant."
+
+Your project should not claim official compliance unless it actually performs a valid compliance assessment.
+
+Prefer:
+
+```text
+NIST-alignment checklist
+Quantum-readiness assessment
+Standards-alignment view
+```
+
+This makes the feature more responsible and realistic.
+
+---
+
+# 13. Module 11 — Quantum Security Assistant / Chatbot
+
+## What is the purpose?
+
+The chatbot should not be a generic chatbot.
+
+It should understand the organization's **actual assessment data**.
+
+The user should be able to ask questions such as:
+
+```text
+Which asset should I migrate first?
+
+Why is the Payment API critical?
+
+Why was ML-KEM recommended?
+
+Show me all RSA assets.
+
+Explain my migration roadmap.
+
+What are my highest-risk assets?
+```
+
+---
+
+## Example
+
+User asks:
+
+> Which system should I migrate first?
+
+The chatbot retrieves the actual assessment data and responds:
+
+```text
+The Payment API should be prioritized first.
+
+Reason:
+- Quantum Risk Score: 87
+- Business Criticality: High
+- Data Sensitivity: High
+- Migration Priority Score: 93
+```
+
+The answer is based on the database, not invented by the chatbot.
+
+---
+
+## Architecture
+
+```text
+User
+ ↓
+Chatbot API
+ ↓
+Question Understanding
+ ↓
+Retrieve Relevant Platform Data
+ ↓
+LLM
+ ↓
+Answer
+```
+
+The assistant can have tools such as:
+
+```text
+get_assets()
+get_risk_results()
+get_priority_assets()
+get_pqc_recommendations()
+get_migration_tasks()
+get_roadmap()
+```
+
+---
+
+## Important rule
+
+The chatbot should **not make independent security decisions**.
+
+For example, it should not invent:
+
+```text
+"Use Algorithm X because I think it is better."
+```
+
+Instead:
+
+```text
+Database / Decision Engine
+        ↓
+Actual recommendation
+        ↓
+Chatbot explains it
+```
+
+This is much safer.
+
+---
+
+# 14. Module 12 — Reports & Executive Dashboard
+
+## What is the purpose?
+
+Different users need different information.
+
+A security engineer wants technical details.
+
+A manager wants a summary.
+
+---
+
+## Security view
 
 Show:
 
-* Enterprise quantum risk distribution
-* Number of assets by risk
-* PQC algorithm recommendations
-* Priority distribution
-* Migration stages
-* High-risk assets
-
----
-
-## B. Personalized Migration Roadmap
-
-Instead of a generic recommendation, generate a roadmap based on the enterprise's own data.
-
 ```text
-Your Enterprise
-
-Stage 1 → 15 Critical Assets
-Stage 2 → 40 High-Risk Assets
-Stage 3 → 100 Medium-Risk Assets
-Stage 4 → Remaining Assets
+Total Assets
+Algorithms
+Key Sizes
+Risk Levels
+Critical Assets
+PQC Recommendations
+Migration Tasks
+Crypto-Agility Findings
 ```
 
 ---
 
-## C. Explainable AI
+## Executive view
 
-For each prediction, show **why** the model made that decision.
+Show:
+
+```text
+Overall Quantum Risk
+Critical Assets
+Migration Progress
+Quantum Readiness
+Estimated Effort
+Top Priorities
+```
+
+---
+
+## Example
+
+```text
+┌────────────────────────────────────────┐
+│       QUANTUM SECURITY OVERVIEW        │
+├────────────────────────────────────────┤
+│ Quantum Risk             78 / 100      │
+│ Risk Category            HIGH           │
+│ Critical Assets          12             │
+│ Migration Progress       35%            │
+│ Quantum Readiness        62 / 100       │
+│ Estimated Effort         Medium         │
+└────────────────────────────────────────┘
+```
+
+---
+
+## PDF report
+
+The platform can generate a report containing:
+
+```text
+1. Executive Summary
+2. Cryptographic Inventory
+3. Quantum Risk Assessment
+4. Critical Assets
+5. PQC Recommendations
+6. Migration Priorities
+7. Cost/Effort Estimates
+8. Migration Roadmap
+9. Crypto-Agility Findings
+10. Migration Progress
+```
+
+This makes the project useful for demonstrations and presentations.
+
+---
+
+# 15. What NOT to Build
+
+A good project is not one that has the most features.
+
+It is one that has **useful features that can actually be implemented**.
+
+Avoid these for now.
+
+## 15.1 Fully automatic production migration
+
+Do not build:
+
+```text
+Upload production infrastructure
+        ↓
+Automatically change cryptography
+        ↓
+Automatically deploy to production
+```
+
+This is too risky and extremely complex.
+
+Your platform should instead provide:
+
+```text
+Assessment
++
+Recommendation
++
+Planning
++
+Configuration Guidance
++
+Tracking
+```
+
+---
+
+## 15.2 Implementing your own cryptographic algorithms
+
+Do not write your own implementation of:
+
+```text
+ML-KEM
+ML-DSA
+etc.
+```
+
+from scratch.
+
+Use established, trusted implementations when cryptographic testing is required.
+
+Your project's main contribution is the **migration intelligence and management layer**, not inventing a new cryptographic primitive.
+
+---
+
+## 15.3 Making everything ML
+
+Do not create an ML model for every feature.
+
+Use the right approach for each problem:
+
+| Problem | Recommended Approach |
+|---|---|
+| Quantum Risk | ML |
+| Risk Category | Derived from Risk Score |
+| Migration Priority | Weighted scoring / rules |
+| PQC Recommendation | Rule + compatibility engine |
+| Roadmap | Rules + templates |
+| Cost Estimate | Formula / benchmark |
+| Crypto Scan | Regex / static analysis |
+| Chatbot | LLM + database/tools |
+| Progress Tracking | Database |
+| Reports | Backend + templates |
+
+This is a much more realistic architecture.
+
+---
+
+# 16. Recommended Development Order
+
+Do not build all 12 modules simultaneously.
+
+Use this order.
+
+## Phase 1 — Core Intelligence
+
+### Already being developed
+
+```text
+1. Dataset Processing
+2. Feature Engineering
+3. Quantum Risk Score
+4. Risk Category
+5. PQC Recommendation
+6. Results Dashboard
+```
+
+Goal:
+
+> Determine the quantum security risk of cryptographic assets.
+
+---
+
+# Phase 2 — Discovery
+
+Build:
+
+```text
+1. Manual Asset Entry
+2. CSV Upload
+3. Certificate Upload
+4. Certificate Parser
+5. Cryptographic Inventory
+```
+
+Flow:
+
+```text
+Certificate
+     ↓
+Parser
+     ↓
+Crypto Metadata
+     ↓
+Inventory
+     ↓
+Risk Assessment
+```
+
+This should be your **first major expansion after Phase 1**.
+
+---
+
+# Phase 3 — Decision Intelligence
+
+Build:
+
+```text
+1. Migration Priority Score
+2. PQC Strategy Engine
+3. Cost/Effort Estimator
+```
+
+Flow:
+
+```text
+Risk Prediction
+      +
+Business Criticality
+      +
+Data Sensitivity
+      +
+Exposure
+      ↓
+Migration Priority
+      ↓
+Recommended Strategy
+```
+
+This is where the project becomes a real decision-support system.
+
+---
+
+# Phase 4 — Migration Planning
+
+Build:
+
+```text
+1. Migration Roadmap
+2. Migration Phases
+3. Recommended Actions
+4. Task Checklist
+5. Progress Tracking
+```
+
+Flow:
+
+```text
+Critical Asset
+      ↓
+Priority = 95
+      ↓
+Migration Phase
+      ↓
+Generate Tasks
+      ↓
+Track Completion
+```
+
+---
+
+# Phase 5 — Security Maturity
+
+Add:
+
+```text
+1. Crypto-Agility Analyzer
+2. Quantum Readiness Score
+3. Standards/Alignment Checklist
+4. Legacy Crypto Detection
+```
+
+These features make the platform more useful beyond the initial risk prediction.
+
+---
+
+# Phase 6 — AI Assistant & Reporting
+
+Finally add:
+
+```text
+1. Organization-aware chatbot
+2. Natural-language querying
+3. Executive dashboard
+4. PDF reports
+```
 
 Example:
 
 ```text
-Asset A was classified as Critical because:
+User:
+"Which assets are most urgent?"
 
-• Weak/legacy cryptographic algorithm
-• High business criticality
-• High exposure
-• Large blast radius
-```
-
-This can make the system more transparent and useful for enterprise decision-making.
-
----
-
-## D. What-If Analysis
-
-This could be a strong feature.
-
-The user can change an asset property and see how the prediction changes.
-
-Example:
-
-```text
-Current Key Size = 2048
         ↓
-Predicted Risk = Critical
 
-Change Key Size = 4096
+Chatbot retrieves:
+Risk + Priority + Criticality
+
         ↓
-Recalculate
+
+Answer:
+"These five assets have the highest migration priority."
+```
+
+---
+
+# 17. Final Recommended Project Architecture
+
+The strongest practical version of your project would look like this:
+
+```text
+                 ┌──────────────────────────┐
+                 │       USER / ADMIN       │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │  ASSET DISCOVERY         │
+                 │  CSV / Certificate /     │
+                 │  Manual Input            │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ CRYPTOGRAPHIC INVENTORY  │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ QUANTUM RISK ENGINE      │
+                 │        ML MODELS         │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ MIGRATION PRIORITY       │
+                 │ ENGINE                   │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ PQC RECOMMENDATION &     │
+                 │ STRATEGY ENGINE          │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ COST & PERFORMANCE       │
+                 │ ESTIMATOR                │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ MIGRATION ROADMAP        │
+                 │ GENERATOR                │
+                 └────────────┬─────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ TASK & PROGRESS TRACKER  │
+                 └────────────┬─────────────┘
+                              ↓
+          ┌───────────────────┴───────────────────┐
+          ↓                                       ↓
+┌──────────────────────┐              ┌──────────────────────┐
+│ CRYPTO-AGILITY       │              │ QUANTUM READINESS    │
+│ ANALYZER             │              │ & ALIGNMENT          │
+└──────────────────────┘              └──────────────────────┘
+          │                                       │
+          └───────────────────┬───────────────────┘
+                              ↓
+                 ┌──────────────────────────┐
+                 │ AI SECURITY ASSISTANT    │
+                 │ + REPORTING             │
+                 └──────────────────────────┘
+```
+
+---
+
+# 18. The Core Idea to Remember
+
+The easiest way to understand the whole project is:
+
+```text
+DISCOVER
+"What cryptography do we have?"
         ↓
-New Predicted Risk = High
+ASSESS
+"How vulnerable are we?"
+        ↓
+PRIORITIZE
+"What should we migrate first?"
+        ↓
+RECOMMEND
+"What PQC strategy should we consider?"
+        ↓
+ESTIMATE
+"What effort/performance impact can we expect?"
+        ↓
+PLAN
+"What steps should we follow?"
+        ↓
+EXECUTE & TRACK
+"Which migration tasks are completed?"
+        ↓
+VERIFY
+"How quantum-ready are we now?"
+        ↓
+ASSIST
+"Can I ask the platform questions about my organization?"
 ```
 
-This allows users to explore:
+This gives every module a clear purpose.
 
-> **"What happens if I change this configuration?"**
-
----
-
-## E. Migration Simulation
-
-The system could allow users to simulate different migration scenarios.
-
-Example:
+The project therefore evolves from:
 
 ```text
-Scenario A
---------
-Migrate all critical assets first
-
-Scenario B
---------
-Migrate by business unit
-
-Scenario C
---------
-Migrate lowest downtime-risk assets first
+             PHASE 1
+       ML Prediction System
+              ↓
+"How much quantum risk do I have?"
 ```
 
-Then compare:
-
-* Number of assets handled
-* Estimated duration
-* Downtime risk
-* Compatibility risk
-* Overall remaining quantum risk
-
-This can be a particularly strong feature because it moves from **prediction → decision support**.
-
----
-
-## F. Progress Tracking
-
-Once an enterprise begins migration:
+into:
 
 ```text
-Total Assets: 500
-
-Migrated: 150
-Remaining: 350
-
-Critical Assets Remaining: 12
+             PHASE 2
+   Quantum-Safe Migration Platform
+              ↓
+"What do I have?"
+"What is at risk?"
+"What should I migrate first?"
+"What should I use?"
+"How much effort will it take?"
+"What should I do?"
+"How do I track it?"
+"How ready am I?"
+"Can I ask questions about it?"
 ```
 
-The roadmap and enterprise risk level can update as assets are migrated.
-
----
-
-# 6. Complete Project Flow
-
-```text
-════════════════════════════════════
-PHASE 1 — ML PREDICTION ENGINE
-════════════════════════════════════
-
-Existing Dataset
-       ↓
-EDA
-       ↓
-Preprocessing
-       ↓
-Feature Engineering
-       ↓
-Train Models for ALL Outputs
-       ↓
-Evaluate Models
-       ↓
-Select Best Models
-       ↓
-Save ML Pipeline
-
-
-════════════════════════════════════
-PHASE 2 — REAL-WORLD DECISION SYSTEM
-════════════════════════════════════
-
-New Enterprise Data
-       ↓
-Validate and Process Data
-       ↓
-Use Saved ML Models
-       ↓
-Predict All Outputs
-       ↓
-────────────────────────────
-        BEYOND PREDICTION
-────────────────────────────
-       ↓
-Enterprise Risk Analysis
-       ↓
-Compare All Assets
-       ↓
-Prioritize Assets
-       ↓
-Generate Migration Roadmap
-       ↓
-Risk-Aware Recommendations
-       ↓
-Dashboard and Visualization
-       ↓
-What-If Analysis / Simulation
-       ↓
-Progress Tracking
-```
-
----
-
-# 7. The Exact Difference Between the Two Phases
-
-| Phase 1 — This Semester     | Phase 2 — Next Semester            |
-| --------------------------- | ---------------------------------- |
-| Work with existing dataset  | Work with new/real enterprise data |
-| Train all ML models         | Use saved ML models                |
-| Predict all dataset targets | Predict outputs for user assets    |
-| Evaluate model performance  | Build real-world application       |
-| Compare ML algorithms       | Analyze enterprise as a whole      |
-| Save models                 | Prioritize assets                  |
-| Build ML foundation         | Generate migration roadmap         |
-| —                           | Dashboard                          |
-| —                           | Explainability                     |
-| —                           | What-if analysis                   |
-| —                           | Migration simulation               |
-| —                           | Progress tracking                  |
-
----
-
-# 8. Final Project Aim
-
-The project can now be summarized as:
-
-> **QSecureTwin is an ML-based decision-support system for Post-Quantum Cryptography migration. In Phase 1, we develop and evaluate machine learning models to predict quantum risk, PQC recommendations, migration priority, migration stages, and migration-related outcomes using the available dataset. In Phase 2, these trained models are applied to new enterprise data and extended with enterprise-level analysis, asset prioritization, migration roadmap generation, explainability, simulation, and interactive decision-support features.**
-
-## In one sentence
-
-> **Phase 1 teaches the system to understand and predict the PQC migration status of an asset; Phase 2 turns those predictions into a practical tool that helps an enterprise understand, plan, simulate, and manage its journey toward post-quantum cryptography.**
-
-
-
-| Area                             | What existing work already does                                        | What is missing / our gap                                                         | What our project will do                                                                   |
-| -------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| **1. Asset Discovery**           | Helps companies find their cryptographic assets                        | Finding assets alone does not give complete information about their migration     | Our system will analyze the available information about each asset                         |
-| **2. Risk Assessment**           | Existing methods can identify quantum risk                             | They may only focus on risk                                                       | Our system will predict **risk along with other migration information**                    |
-| **3. PQC Recommendation**        | Existing standards/frameworks suggest which PQC algorithms can be used | Recommendation may not be combined with all other asset predictions in one system | Our system predicts/recommends a **PQC algorithm for each asset**                          |
-| **4. Migration Priority**        | Existing methods can help decide which assets should be migrated first | Priority can be handled separately from other analysis                            | Our system predicts **migration priority together with risk and other outputs**            |
-| **5. Migration Problems**        | Existing work discusses problems like compatibility and downtime       | These factors are not always predicted together for every asset                   | Our system predicts **success, rollback, downtime risk, compatibility risk, and duration** |
-| **6. Complete Asset View**       | Different methods may analyze different aspects                        | User may need to look at multiple results separately                              | Our system gives **one complete prediction profile for each asset**                        |
-| **7. Enterprise-Level Analysis** | Existing frameworks provide general migration guidance                 | We want to use predictions from all assets together                               | Our system will analyze the **overall enterprise situation**                               |
-| **8. Explainability**            | Some systems may give a result without clearly explaining it           | Users may not understand *why* a prediction was made                              | Our system can explain **why an asset received a particular prediction**                   |
-| **9. What-If Analysis**          | Most assessments analyze the current situation                         | Users cannot easily test changes                                                  | Our system can let users change inputs and see **how predictions change**                  |
-| **10. Migration Simulation**     | Existing frameworks provide migration guidance                         | Users may not be able to interactively compare different strategies               | Our system can compare **different migration scenarios**                                   |
-| **11. Integrated System**        | Existing work may provide frameworks or solve individual problems      | Different tasks can remain separate                                               | Our project aims to bring them together in **one practical system**                        |
+That is the version that is much more likely to feel like a **real-world product rather than only an ML project**.
