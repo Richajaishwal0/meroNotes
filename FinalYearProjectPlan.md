@@ -1568,3 +1568,7 @@ into:
 ```
 
 That is the version that is much more likely to feel like a **real-world product rather than only an ML project**.
+
+
+![Uploading image.png…]()
+
