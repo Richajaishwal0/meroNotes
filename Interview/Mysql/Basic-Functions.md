@@ -264,6 +264,34 @@ FROM patients;
 | Mary | 67 | Senior |
 
 ---
+### `ORDER BY CASE` — Put Specific Value First
+
+Use `CASE` inside `ORDER BY` when you want a **specific value to always come first/last**, regardless of alphabetical order.
+
+```sql
+ORDER BY
+    CASE 
+        WHEN column = 'SpecificValue' THEN 0
+        ELSE 1
+    END,
+    column ASC;
+```
+
+**Example: Ontario first, then alphabetical:**
+
+```sql
+ORDER BY
+    CASE 
+        WHEN province_name = 'Ontario' THEN 0
+        ELSE 1
+    END,
+    province_name ASC;
+```
+ **Remember:**
+
+* `0` → comes **first**
+* `1` → comes **after**
+* Second `ORDER BY` → sorts the remaining values
 
 ---
 
