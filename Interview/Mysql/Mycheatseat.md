@@ -17,6 +17,7 @@ The GeeksforGeeks SQL Interview Questions page uses a mix of **String Functions,
 | `LENGTH()`    | Returns string length      | `SELECT LENGTH(column);`                   |
 | `REPLACE()`   | Replace characters         | `SELECT REPLACE(column,'old','new');`      |
 | `CONCAT()`    | Join strings               | `SELECT CONCAT(col1,col2);`                |
+| `GROUP_CONCAT()` | Combine values from multiple rows |  `SELECT GROUP_CONCAT(product SEPARATOR ',');  By default, MySQL uses a comma , as the separator` |
 | `TRIM()`      | Remove spaces              | `SELECT TRIM(column);`                     |
 | `LTRIM()`     | Remove left spaces         | `SELECT LTRIM(column);`                    |
 | `RTRIM()`     | Remove right spaces        | `SELECT RTRIM(column);`                    |
